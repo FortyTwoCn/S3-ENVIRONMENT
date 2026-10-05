@@ -14,7 +14,7 @@ ESP32-S3 多传感器环境监测项目：可插拔 PCB 底板、ESP32 固件，
 | 网络固件 | `carrier-network-1.0.2`，16MB Flash / 8MB OPI PSRAM，两种 USB 构建版本 |
 | 实物验证 | 2026-10-05 经 CH343 / COM4 烧录；Flash / PSRAM、重启自动联网、WSS 上传、PostgreSQL 入库和网页立即采样已通过 |
 | 网站 | 已部署至 [s.xuanknow.cn](https://s.xuanknow.cn)，Linux / 宝塔 / Nginx / PHP 8.5 / PostgreSQL，SSL 由宝塔管理 |
-| 传感器 | 载板尚未到货，杜邦线联调中；两块 I2C 模块暂无应答，MQ 未连接、雷达未供电；传感器测量尚未通过 |
+| 传感器 | 载板尚未到货；杜邦线接法下 BH1750 / BME688 读取、上传、入库和网页立即采样已通过；MQ 未连接、雷达未供电，完整四传感器测试尚未通过 |
 
 开发板排距 **25.40 mm**、针距 **2.54 mm**，每侧 22Pin。端部偏移、各模块本体尺寸及 USB 插头包络仍需实物确认。打板前按 [硬件说明](hardware/README.md) 核对 [1:1 校验 PDF](hardware/fabrication/ESP32_FOOTPRINT_1_TO_1_CHECK.pdf)，不要把暂定制造文件当作已完成机械验证的版本。
 
@@ -39,7 +39,7 @@ S3-ENVIRONMENT/
 ├── tools/eda/               嘉立创 EDA CLI / MCP 与 Run API Gateway 辅助工具
 ├── tests/                   隔离数据库的软件集成 / 浏览器测试
 ├── test_results/            已执行的软件、编译与实物验证结果
-├── screenshots/             软件联调截图，使用明确标注的模拟数据
+├── screenshots/             软件联调与实物截图；模拟数据截图明确标注
 ├── compose.yaml / compose.production.yaml
 ├── start_windows.ps1 / stop_windows.ps1
 └── SHA256SUMS.txt            仓库内容校验清单
@@ -112,8 +112,10 @@ Linux 将 `COM4` 改成实际串口，例如 `/dev/ttyUSB0`。原生 USB CDC 版
 
 真实 `.env`、网站密码、设备令牌、SMTP 授权码、SSH 私钥、NVS 配网镜像、数据库与原 Flash 备份均未提交。需要为新的部署生成自己的密钥和设备令牌。实物记录中的 Wi-Fi 名称也已脱敏。
 
-1.0.2 的实物烧录、I2C 扫描、MQ 空值入库与立即采样验证见 [physical_bringup_1.0.2.json](test_results/physical_bringup_1.0.2.json)。MQ 显示回归检查：`node tests/mq_display.cjs`；MQ 遥测契约检查：`php tests/telemetry_mq.php`。
+BH1750 / BME688 最新实测读数、I2C 地址及网页入库验证见 [physical_i2c_1.0.2.json](test_results/physical_i2c_1.0.2.json) 和 [实测页面截图](screenshots/physical_i2c_20261005.png)。
+
+1.0.2 修正接线前的实物烧录、I2C 扫描、MQ 空值入库与立即采样验证见 [physical_bringup_1.0.2.json](test_results/physical_bringup_1.0.2.json)。MQ 显示回归检查：`node tests/mq_display.cjs`；MQ 遥测契约检查：`php tests/telemetry_mq.php`。
 
 1.0.1 的历史物理网络验证见 [physical_website.json](test_results/physical_website.json) 和 [烧录启动检查](test_results/physical_flash.json)。`tests/` 的软件测试使用隔离的 `*_test` 数据库，包含清空测试表的操作；不会默认执行，也不应配置为真实监测数据库。
 
-完整传感器测量、真实 MQ 告警和实际邮箱投递仍需装板后验证。硬件的 **MECHANICAL VERIFICATION REQUIRED** 状态保留在全部制造说明中。
+LD2410C、MQ 及真实烟雾邮件告警仍待实物验证；不能由两块 I2C 传感器通过就认定全部模块通过。硬件的 **MECHANICAL VERIFICATION REQUIRED** 状态保留在全部制造说明中。

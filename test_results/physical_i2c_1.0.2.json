@@ -1,0 +1,58 @@
+{
+  "timestamp_utc": "2026-10-05T14:07:53.294049+00:00",
+  "firmware": "carrier-network-1.0.2",
+  "status": "PASS_I2C_SENSORS",
+  "i2c_pins": {
+    "sda": 8,
+    "scl": 9
+  },
+  "i2c_addresses": {
+    "BH1750": "0x23",
+    "BME688": "0x76"
+  },
+  "bme68x_chip_id": "0x61",
+  "i2c_scan_bus_errors": 0,
+  "verified_sensors": [
+    "BH1750",
+    "BME688"
+  ],
+  "all_four_sensors_verified": false,
+  "remaining_sensors": {
+    "LD2410C": "Unpowered/disconnected; not verified",
+    "MQ": "Not connected; monitoring disabled"
+  },
+  "website_sample_now_completed": true,
+  "postgresql_sample": {
+    "id": 38,
+    "reason": "requested",
+    "data": {
+      "gas_ohm": 15245,
+      "mq_ao_v": null,
+      "mq_gpio": null,
+      "mq_ready": false,
+      "mq_smoke": null,
+      "radar_ok": false,
+      "rssi_dbm": -18,
+      "uptime_s": 71,
+      "bh1750_ok": true,
+      "bme688_ok": true,
+      "light_lux": 99.16666412,
+      "mq_adc_mv": null,
+      "mq_adc_raw": null,
+      "mq_enabled": false,
+      "humidity_pct": 48.61921692,
+      "pressure_hpa": 1006.280029,
+      "queue_dropped": 0,
+      "sensor_age_ms": 4,
+      "temperature_c": 25.00546837,
+      "radar_presence": null,
+      "radar_uart_hex": "",
+      "radar_uart_bytes": 0,
+      "radar_uart_age_ms": null
+    }
+  },
+  "live_dashboard_verified": true,
+  "temporary_login_revoked": true,
+  "credentials_changed": false,
+  "connection_issue": "User corrected two physical wiring-position issues; no GPIO reassignment required"
+}

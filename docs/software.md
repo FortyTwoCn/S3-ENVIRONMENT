@@ -4,7 +4,7 @@
 
 已包含完整网站源码、PHP 依赖、数据库结构、ESP32 源码、两种 USB 版本的预编译固件、Windows 启停脚本、Docker 公网部署配置和测试结果。没有将 Wi-Fi 密码、网站密码或实际邮箱授权码写进固件。网页截图使用明确标注的模拟数据。
 
-**网站已部署到 https://s.xuanknow.cn；2026-10-05 已通过 COM4 给实物烧录 `carrier-network-1.0.2`，确认 16MB Flash、8MB PSRAM、自动联网、WSS 上传和 PostgreSQL 入库，网页“立即采样”已得到实物响应。1.0.2 修复 MQ 未启用时上传悬空读数的问题，增加 I2C 扫描和传感器重试命令。当前两块 I2C 模块尚未应答，MQ 未连接、雷达未供电，不能声称四传感器测量已通过。最新验证见 `test_results/physical_bringup_1.0.2.json`；`physical_flash.json` 和 `physical_website.json` 保留 1.0.1 的历史联网验证。** 原 PCB 的机械验证状态仍以 `hardware/README.md` 为准。
+**网站已部署到 https://s.xuanknow.cn；2026-10-05 已通过 COM4 给实物烧录 `carrier-network-1.0.2`，确认 16MB Flash、8MB PSRAM、自动联网、WSS 上传和 PostgreSQL 入库，网页“立即采样”已得到实物响应。1.0.2 修复 MQ 未启用时上传悬空读数的问题，增加 I2C 扫描和传感器重试命令。用户修正接线后，BH1750 0x23 和 BME688 0x76 已通过实物读取、网页立即采样、WSS 上传、PostgreSQL 入库和页面显示验证。MQ 未连接、雷达未供电，四传感器完整测量仍待验证。最新结果见 `test_results/physical_i2c_1.0.2.json`；`test_results/physical_bringup_1.0.2.json` 保留修线前的诊断记录；`physical_flash.json` 和 `physical_website.json` 保留 1.0.1 的历史联网验证。** 原 PCB 的机械验证状态仍以 `hardware/README.md` 为准。
 
 ## 1. 先在这台 Windows 电脑启动
 
