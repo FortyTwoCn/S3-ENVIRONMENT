@@ -1,0 +1,59 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: ${DB_NAME:-sensor_monitor}
+      POSTGRES_USER: ${DB_USER:-sensor_monitor}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?先生成 server/.env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./server/database/schema.sql:/docker-entrypoint-initdb.d/001-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+  web:
+    build: ./server
+    env_file: ./server/.env
+    volumes:
+      - sessions:/tmp/sensor-sessions
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+  websocket:
+    build: ./server
+    env_file: ./server/.env
+    command: ["php", "bin/websocket.php"]
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+  worker:
+    build: ./server
+    env_file: ./server/.env
+    command: ["php", "bin/worker.php"]
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+  proxy:
+    image: caddy:2
+    ports:
+      - "8080:80"
+    volumes:
+      - ./deployment/Caddyfile.local:/etc/caddy/Caddyfile:ro
+      - ./server/public:/app/public:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+      - websocket
+    restart: unless-stopped
+volumes:
+  postgres_data:
+  sessions:
+  caddy_data:
+  caddy_config:

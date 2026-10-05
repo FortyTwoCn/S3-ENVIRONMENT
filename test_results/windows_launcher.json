@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "checks": [
+    "Portable PostgreSQL initialized with SCRAM authentication",
+    "PHP HTTP / PHP WebSocket / mail worker / Caddy started hidden",
+    "Password login through Caddy",
+    "Device WebSocket through Caddy"
+  ],
+  "runtime_location": "isolated test copy; no real user configuration changed"
+}

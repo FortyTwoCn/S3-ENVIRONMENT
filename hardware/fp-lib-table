@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "custom") (type "KiCad") (uri "${KIPRJMOD}/footprints/custom.pretty") (options "") (descr "Self-contained sensor carrier library")))

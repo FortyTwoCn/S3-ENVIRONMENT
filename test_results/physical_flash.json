@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "2026-10-05T02:09:00.733586+00:00",
+  "port": "COM4",
+  "firmware": "carrier-network-1.0.1",
+  "firmware_booted": true,
+  "psram_8mb": true,
+  "psram_heap_bytes": 8386279,
+  "flash_16mb": true,
+  "websocket_authenticated": true,
+  "telemetry_acknowledged": true,
+  "wifi_diagnostics": [
+    "Network: SSID=<CONFIGURED_WIFI> status=6 reason=0 password_bytes=9 token_configured=1 TLS=1 host=s.xuanknow.cn port=443",
+    "Wi-Fi connection attempt",
+    "Wi-Fi disconnected: reason=2",
+    "Network: SSID=<CONFIGURED_WIFI> status=0 reason=2 password_bytes=9 token_configured=1 TLS=1 host=s.xuanknow.cn port=443",
+    "Network: SSID=<CONFIGURED_WIFI> status=3 reason=2 password_bytes=9 token_configured=1 TLS=1 host=s.xuanknow.cn port=443",
+    "Wi-Fi IP=192.168.43.187 gateway=192.168.43.1 DNS=192.168.43.1 RSSI=-19 channel=1 time_valid=0 WS_authenticated=0",
+    "Waiting for NTP time before verified TLS connection"
+  ],
+  "provisioning_portal_started": false,
+  "i2c_sensor_detect_line": "BH1750=missing BME688=missing LD UART=256000 8N1",
+  "server_errors": [],
+  "elapsed_s": 20.1
+}

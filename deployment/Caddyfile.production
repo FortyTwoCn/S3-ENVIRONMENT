@@ -1,0 +1,28 @@
+{
+	# ECDSA chain issued under Let's Encrypt ISRG Root X1 (also trusted by firmware).
+	acme_ca https://acme-v02.api.letsencrypt.org/directory
+}
+{$SITE_ADDRESS} {
+	tls {
+		issuer acme {
+			preferred_chains {
+				root_common_name "ISRG Root X1"
+			}
+		}
+	}
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options nosniff
+		Referrer-Policy same-origin
+		X-Frame-Options DENY
+	}
+	@ws path /ws
+	handle @ws {
+		reverse_proxy websocket:8081
+	}
+	handle {
+		root * /app/public
+		php_fastcgi web:9000
+		file_server
+	}
+}

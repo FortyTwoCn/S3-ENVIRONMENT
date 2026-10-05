@@ -1,0 +1,10 @@
+# Preserve exact release bytes, including KiCad and firmware checksum records.
+* -text
+*.bin binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.xlsx binary
+*.zip binary
+*.step binary

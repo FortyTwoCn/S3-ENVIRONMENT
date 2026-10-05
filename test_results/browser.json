@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "test_count": 11,
+  "checks": [
+    "Real login, online device, chart and paginated history render",
+    "Chart canvas contains actual plotted pixels",
+    "Browser button triggers and displays completed device sampling",
+    "Metric and time filters persist in URL",
+    "Table paging works",
+    "CSV export downloads from real database",
+    "Background refresh preserves unsaved settings and passwords",
+    "Mobile portrait has no document overflow",
+    "Mobile configuration controls fit viewport",
+    "Browser restart simulation retains login without password",
+    "No browser JavaScript runtime errors"
+  ],
+  "data": "simulated sensor values through real WebSocket/PHP/PostgreSQL; not physical readings",
+  "screenshots": [
+    "dashboard_desktop.png",
+    "dashboard_mobile.png",
+    "settings_desktop.png",
+    "settings_mobile.png"
+  ]
+}

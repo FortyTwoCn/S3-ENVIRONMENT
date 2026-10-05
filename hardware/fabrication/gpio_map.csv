@@ -1,0 +1,13 @@
+﻿Function,GPIO,Direction,Interface,Protection / notes
+I2C SDA,8,Bidirectional,J2.2 / J3.4 / J7.3,3.3V; R2 4.7k DNP
+I2C SCL,9,Output,J2.3 / J3.3 / J7.4,3.3V; R3 4.7k DNP
+Radar RX (LD TX),17,Input,J4.1,R9 1k -> U1 ch1; 100k pulldown
+Radar TX (LD RX),18,Output,J4.2,U1 ch2 -> R10 1k; 100k pulldown
+Radar OUT,16,Input,J4.3,R11 1k -> U1 ch3; 100k pulldown
+MQ ADC,4,Input ADC1,J5.4,6.8k / 7.5k divider; 100nF; U1 ch4; 100k pulldown
+MQ DO,5,Input,J5.3,AO3400A inverter; 10k 3V3 pullup; polarity inverted
+Expansion,6,User GPIO,J8.3,3.3V only
+Expansion,7,User GPIO,J9.3,3.3V only
+Expansion,10,User GPIO,J10.3,3.3V only
+Expansion,11,User GPIO,J11.3,3.3V only
+Servo PWM,12,Output,J12.3,R18 1k; independent servo 5V rail

@@ -1,0 +1,13 @@
+services:
+  proxy:
+    ports: !override
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:?请设置域名，例如 sensors.example.com}
+    volumes: !override
+      - ./deployment/Caddyfile.production:/etc/caddy/Caddyfile:ro
+      - ./server/public:/app/public:ro
+      - caddy_data:/data
+      - caddy_config:/config

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "A4_verification_pages": 2,
+  "calibration_mm": 100.00000883738198,
+  "header_row_spacing_mm": 25.400000000000006,
+  "pin_pitch_mm": 2.54,
+  "drawn_pin_centers": 44,
+  "schematic_pages": 1,
+  "assembly_pages": 1,
+  "visual_review": "Rendered all pages and inspected PNGs; no clipping/overlap detected",
+  "mechanical_physical_check": "PENDING"
+}

@@ -1,0 +1,30 @@
+{
+  "toolchain": "PlatformIO 6.2.0 / espressif32 6.12.0 / Arduino ESP32 2.0.17",
+  "N16R8_settings": "16MB Flash QIO / OPI PSRAM / custom 16MB partitions",
+  "environments": {
+    "yd_uart": {
+      "status": "SUCCESS",
+      "RAM_bytes": 20164,
+      "Flash_app_bytes": 327189,
+      "files_sha256": {
+        "bootloader.bin": "2a71d69b471e20c2bac7fb469f3c6a807b3ebee780e348e5889db0da849ca363",
+        "boot_app0.bin": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
+        "firmware.bin": "01702cbf73278354fb32414e4b4ae061701782b6a77979c68086ef981e255f61",
+        "partitions.bin": "6731888b421c3946dac16356659877021e0f46dbd1c55abafa17989eb7265387"
+      }
+    },
+    "yd_native_usb": {
+      "status": "SUCCESS",
+      "RAM_bytes": 20292,
+      "Flash_app_bytes": 331997,
+      "files_sha256": {
+        "bootloader.bin": "2a71d69b471e20c2bac7fb469f3c6a807b3ebee780e348e5889db0da849ca363",
+        "boot_app0.bin": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
+        "firmware.bin": "79906af420742f8158bd510b719a893e9d90534a9c57f0669a8f9cd840aed26b",
+        "partitions.bin": "6731888b421c3946dac16356659877021e0f46dbd1c55abafa17989eb7265387"
+      }
+    }
+  },
+  "hardware_uploaded": false,
+  "hardware_tested": false
+}

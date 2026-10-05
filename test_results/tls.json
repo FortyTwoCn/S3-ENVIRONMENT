@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "checks": [
+    "HTTPS login with certificate verification",
+    "Secure persistent login cookies",
+    "Device WSS handshake through reverse proxy",
+    "Browser WSS ticket authentication through reverse proxy"
+  ],
+  "issuer": "local test CA; not public ACME",
+  "trusted_system_store_modified": false
+}

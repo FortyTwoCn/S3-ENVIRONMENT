@@ -1,0 +1,42 @@
+# Real configuration, credentials, sessions and database state.
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+private/
+secrets/
+backups/
+.runtime/
+pgdata/
+work/
+*.sql.gz
+*.dump
+*provisioning*.bin
+*original_flash*.bin
+*connection-details*.txt
+*website-password*.txt
+
+# Build caches and editor state. Verified prebuilt firmware is intentionally tracked.
+.pio/
+.vscode/
+.idea/
+node_modules/
+__pycache__/
+*.pyc
+*.pid
+*.log
+*.kicad_prl
+*.lck
+*-backups/
+~*
+Thumbs.db
+.DS_Store
+
+# These historical logs are part of the verified hardware and bring-up records.
+!hardware/checks/firmware_*.log
+!docs/device_flash/ESP32S3_COM4/serial_boot.log
+!docs/device_flash/ESP32S3_COM4/serial_network_switch.log

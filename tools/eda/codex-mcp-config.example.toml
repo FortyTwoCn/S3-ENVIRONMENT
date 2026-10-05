@@ -1,0 +1,6 @@
+# Replace the script and executable paths with paths on your own computer.
+[mcp_servers.lceda_pro]
+command = "python"
+args = ["-u", "C:/path/to/S3-ENVIRONMENT/tools/eda/lceda_mcp.py", "--exe", "D:/Program Files/lceda-pro/lceda-pro.exe"]
+startup_timeout_sec = 20
+tool_timeout_sec = 120

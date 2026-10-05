@@ -1,0 +1,26 @@
+{
+  "tls_protocol": "TLSv1.3",
+  "certificate_not_after": "Dec  1 04:56:39 2026 GMT",
+  "time_utc": "2026-10-04T12:52:45.707408+00:00",
+  "checks": [
+    "Certificate and hostname verified using firmware ISRG Root X1",
+    "HTTP redirects to HTTPS",
+    "Public HTTPS login page",
+    "HTTPS remembered login and WSS application config",
+    "Session cookie Secure, HttpOnly and SameSite=Strict",
+    "Browser WSS authentication",
+    "Device WSS authentication",
+    "Encrypted telemetry stored and broadcast",
+    "Sample-now round trip over WSS",
+    "Chromium HTTPS dashboard and live WSS",
+    "Chromium session cookie is Secure"
+  ],
+  "pass_count": 11,
+  "certificate_verification_disabled": false,
+  "hardware_tested": false,
+  "cleanup": {
+    "temporary_devices_deleted": 1,
+    "remaining_devices": 1,
+    "temporary_auth_revoked": true
+  }
+}

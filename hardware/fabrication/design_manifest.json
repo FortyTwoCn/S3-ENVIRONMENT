@@ -1,0 +1,2410 @@
+{
+  "schematic_uuid": "04d46a9c-9529-4078-8a6f-960d3992360b",
+  "name": "esp32_sensor_carrier",
+  "mechanics": {
+    "HEADER_ROW_SPACING": 25.4,
+    "PIN_PITCH": 2.54,
+    "PINS_PER_ROW": 22,
+    "ESP_PCB_WIDTH": 27.94,
+    "ESP_BODY_LENGTH": 57.15,
+    "ESP_TOTAL_LENGTH": 63.389002,
+    "FIRST_PIN_FROM_BODY_TOP": 1.905,
+    "LAST_PIN_FROM_USB_EDGE": 1.905,
+    "EDGE_OFFSETS_VERIFIED": false,
+    "MECHANICAL_VERIFIED": false,
+    "SENSOR_ENVELOPES_VERIFIED": false
+  },
+  "components": [
+    {
+      "ref": "J1",
+      "value": "ESP32-S3 N16R8 / USER MODULE",
+      "footprint": "custom:ESP32-S3_N16R8_44PIN_CARRIER",
+      "pins": [
+        {
+          "number": "1",
+          "name": "3V3",
+          "net": "+3V3",
+          "type": "power_out"
+        },
+        {
+          "number": "2",
+          "name": "3V3",
+          "net": "+3V3",
+          "type": "power_out"
+        },
+        {
+          "number": "3",
+          "name": "RST",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "net": "MQ_ADC",
+          "type": "input"
+        },
+        {
+          "number": "5",
+          "name": "5",
+          "net": "MQ_DO_3V3",
+          "type": "input"
+        },
+        {
+          "number": "6",
+          "name": "6",
+          "net": "GPIO6",
+          "type": "bidirectional"
+        },
+        {
+          "number": "7",
+          "name": "7",
+          "net": "GPIO7",
+          "type": "bidirectional"
+        },
+        {
+          "number": "8",
+          "name": "15",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "9",
+          "name": "16",
+          "net": "RADAR_OUT_ESP",
+          "type": "input"
+        },
+        {
+          "number": "10",
+          "name": "17",
+          "net": "RADAR_TX_ESP",
+          "type": "input"
+        },
+        {
+          "number": "11",
+          "name": "18",
+          "net": "RADAR_RX_ESP",
+          "type": "output"
+        },
+        {
+          "number": "12",
+          "name": "8",
+          "net": "I2C_SDA",
+          "type": "bidirectional"
+        },
+        {
+          "number": "13",
+          "name": "3",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "14",
+          "name": "46",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "15",
+          "name": "9",
+          "net": "I2C_SCL",
+          "type": "bidirectional"
+        },
+        {
+          "number": "16",
+          "name": "10",
+          "net": "GPIO10",
+          "type": "bidirectional"
+        },
+        {
+          "number": "17",
+          "name": "11",
+          "net": "GPIO11",
+          "type": "bidirectional"
+        },
+        {
+          "number": "18",
+          "name": "12",
+          "net": "SERVO_PWM",
+          "type": "output"
+        },
+        {
+          "number": "19",
+          "name": "13",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "20",
+          "name": "14",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "21",
+          "name": "5V",
+          "net": "ESP32_5V",
+          "type": "power_out"
+        },
+        {
+          "number": "22",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "23",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "24",
+          "name": "TX43",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "25",
+          "name": "RX44",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "26",
+          "name": "1",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "27",
+          "name": "2",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "28",
+          "name": "42",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "29",
+          "name": "41",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "30",
+          "name": "40",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "31",
+          "name": "39",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "32",
+          "name": "38",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "33",
+          "name": "37",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "34",
+          "name": "36",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "35",
+          "name": "35",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "36",
+          "name": "0",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "37",
+          "name": "45",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "38",
+          "name": "48",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "39",
+          "name": "47",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "40",
+          "name": "21",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "41",
+          "name": "20",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "42",
+          "name": "19",
+          "net": "",
+          "type": "bidirectional"
+        },
+        {
+          "number": "43",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "44",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "ESP32 Carrier",
+      "uuid": "4e04c812-3e89-535b-8068-b9d55c1bbd66",
+      "dnp": false,
+      "description": "Two 1x22 female sockets, top antenna / bottom USB; photo-based 25.40 mm spacing",
+      "position": [
+        55,
+        7.62,
+        0
+      ]
+    },
+    {
+      "ref": "J2",
+      "value": "GY-302 BH1750",
+      "footprint": "custom:GY-302_BH1750_SOCKET",
+      "pins": [
+        {
+          "number": "1",
+          "name": "ADDR",
+          "net": "BH_ADDR",
+          "type": "input"
+        },
+        {
+          "number": "2",
+          "name": "SDA",
+          "net": "I2C_SDA",
+          "type": "bidirectional"
+        },
+        {
+          "number": "3",
+          "name": "SCL",
+          "net": "I2C_SCL",
+          "type": "input"
+        },
+        {
+          "number": "4",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "VCC",
+          "net": "+3V3",
+          "type": "power_in"
+        }
+      ],
+      "section": "I2C Sensors",
+      "uuid": "6bf24c00-578c-5a16-98d9-8004050e11f6",
+      "dnp": false,
+      "description": "Pluggable user provided module; envelope requires fit check",
+      "position": [
+        9,
+        25,
+        90
+      ]
+    },
+    {
+      "ref": "J3",
+      "value": "BME688",
+      "footprint": "custom:BME688_SOCKET",
+      "pins": [
+        {
+          "number": "1",
+          "name": "VCC",
+          "net": "+3V3",
+          "type": "power_in"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "SCL",
+          "net": "I2C_SCL",
+          "type": "input"
+        },
+        {
+          "number": "4",
+          "name": "SDA",
+          "net": "I2C_SDA",
+          "type": "bidirectional"
+        },
+        {
+          "number": "5",
+          "name": "SDO",
+          "net": "BME_ADDR",
+          "type": "input"
+        },
+        {
+          "number": "6",
+          "name": "CS",
+          "net": "BME_CS",
+          "type": "input"
+        }
+      ],
+      "section": "I2C Sensors",
+      "uuid": "8d942cda-6e09-5040-b1ae-7cd46c4b3652",
+      "dnp": false,
+      "description": "Pluggable user provided module; envelope requires fit check",
+      "position": [
+        84,
+        25,
+        90
+      ]
+    },
+    {
+      "ref": "J4",
+      "value": "LD2410C",
+      "footprint": "custom:LD2410C_SOCKET",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TX",
+          "net": "RADAR_TX",
+          "type": "output"
+        },
+        {
+          "number": "2",
+          "name": "RX",
+          "net": "RADAR_RX",
+          "type": "input"
+        },
+        {
+          "number": "3",
+          "name": "OUT",
+          "net": "RADAR_OUT",
+          "type": "output"
+        },
+        {
+          "number": "4",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "VCC",
+          "net": "SENSOR_5V",
+          "type": "power_in"
+        }
+      ],
+      "section": "LD2410C Radar",
+      "uuid": "2330eccb-1942-59f3-b3df-5df5caa79fbc",
+      "dnp": false,
+      "description": "Pluggable user provided module; envelope requires fit check",
+      "position": [
+        24,
+        52,
+        0
+      ]
+    },
+    {
+      "ref": "J5",
+      "value": "MQ GAS",
+      "footprint": "custom:MQ_GAS_SOCKET",
+      "pins": [
+        {
+          "number": "1",
+          "name": "VCC",
+          "net": "SENSOR_5V",
+          "type": "power_in"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "DO",
+          "net": "MQ_DO_RAW",
+          "type": "open_collector"
+        },
+        {
+          "number": "4",
+          "name": "AO",
+          "net": "MQ_AO_RAW",
+          "type": "output"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "9cebb546-345c-5cc2-921b-9b489c1e2c2c",
+      "dnp": false,
+      "description": "Pluggable user provided module; envelope requires fit check",
+      "position": [
+        85,
+        70,
+        90
+      ]
+    },
+    {
+      "ref": "JP1",
+      "value": "GND DEFAULT / 3V3 OPTION",
+      "footprint": "custom:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "ADDR",
+          "net": "BH_ADDR",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "3V3",
+          "net": "+3V3",
+          "type": "passive"
+        }
+      ],
+      "section": "I2C Sensors",
+      "uuid": "8053de02-c64b-59c9-90ba-77cf51c72e98",
+      "dnp": false,
+      "description": "Cut bridge 1-2 before soldering 2-3",
+      "position": [
+        10,
+        29.5,
+        0
+      ]
+    },
+    {
+      "ref": "JP2",
+      "value": "GND DEFAULT / 3V3 OPTION",
+      "footprint": "custom:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "ADDR",
+          "net": "BME_ADDR",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "3V3",
+          "net": "+3V3",
+          "type": "passive"
+        }
+      ],
+      "section": "I2C Sensors",
+      "uuid": "2437c673-d105-5efe-aaa7-5632931998cc",
+      "dnp": false,
+      "description": "Cut bridge 1-2 before soldering 2-3",
+      "position": [
+        88,
+        32,
+        0
+      ]
+    },
+    {
+      "ref": "R1",
+      "value": "10k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "BME_CS",
+          "type": "passive"
+        }
+      ],
+      "section": "I2C Sensors",
+      "uuid": "48ce6167-0811-589d-b979-6c31565b73a2",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        102,
+        32,
+        0
+      ]
+    },
+    {
+      "ref": "R2",
+      "value": "4.7k DNP",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "I2C_SDA",
+          "type": "passive"
+        }
+      ],
+      "section": "I2C Sensors",
+      "uuid": "12995643-5b79-5b79-a86f-7341b4532db6",
+      "dnp": true,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        26,
+        21,
+        0
+      ]
+    },
+    {
+      "ref": "R3",
+      "value": "4.7k DNP",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "I2C_SCL",
+          "type": "passive"
+        }
+      ],
+      "section": "I2C Sensors",
+      "uuid": "e6fc2f23-5b4b-51e5-bd03-3e5c5fe16a40",
+      "dnp": true,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        26,
+        25,
+        0
+      ]
+    },
+    {
+      "ref": "R4",
+      "value": "6.8k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "MQ_AO_RAW",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "MQ_ADC_FILTER",
+          "type": "passive"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "2b99cbe2-f580-5682-9000-fa78034ba781",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        87,
+        36,
+        0
+      ]
+    },
+    {
+      "ref": "R5",
+      "value": "7.5k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "MQ_ADC_FILTER",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "03b34c11-a8e4-5f50-8dab-089e760c2b85",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        87,
+        40,
+        0
+      ]
+    },
+    {
+      "ref": "C1",
+      "value": "100nF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "MQ_ADC_FILTER",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "ada74776-1624-5a0a-8869-4a9a589fb7ac",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        94,
+        40,
+        0
+      ]
+    },
+    {
+      "ref": "R6",
+      "value": "33k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "MQ_DO_RAW",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "MQ_BASE",
+          "type": "passive"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "0000695f-3fbd-5252-a2d9-84228050b869",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        102,
+        40,
+        0
+      ]
+    },
+    {
+      "ref": "R7",
+      "value": "100k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "MQ_BASE",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "e708a87e-5f27-5e45-bac8-e1b858d1049a",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        104,
+        43,
+        0
+      ]
+    },
+    {
+      "ref": "R8",
+      "value": "10k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "MQ_DO_3V3",
+          "type": "passive"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "ba02a697-e1c4-5ead-94a9-2780b6b3d7ed",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        97,
+        32,
+        0
+      ]
+    },
+    {
+      "ref": "Q1",
+      "value": "AO3400A",
+      "footprint": "custom:SOT-23",
+      "pins": [
+        {
+          "number": "1",
+          "name": "G",
+          "net": "MQ_BASE",
+          "type": "input"
+        },
+        {
+          "number": "2",
+          "name": "S",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "D",
+          "net": "MQ_DO_3V3",
+          "type": "open_collector"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "e440b524-e23b-54d1-a826-2840be05edda",
+      "dnp": false,
+      "description": "N-MOS inverter; 1=G 2=S 3=D; insulated gate prevents 5V signal back-power when 3V3 is off",
+      "position": [
+        96,
+        36,
+        0
+      ]
+    },
+    {
+      "ref": "R21",
+      "value": "10k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "MQ_DO_RAW",
+          "type": "passive"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "db4fb394-e4a6-52a7-996d-a46374de4309",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        102,
+        46,
+        0
+      ]
+    },
+    {
+      "ref": "U1",
+      "value": "TMUX1511PWR",
+      "footprint": "custom:TSSOP-14_4.4x5mm_P0.65mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "SEL1",
+          "net": "SENSOR_ENABLE",
+          "type": "input"
+        },
+        {
+          "number": "2",
+          "name": "S1",
+          "net": "RADAR_TX_LIMIT",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "D1",
+          "net": "RADAR_TX_ESP",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "SEL2",
+          "net": "SENSOR_ENABLE",
+          "type": "input"
+        },
+        {
+          "number": "5",
+          "name": "S2",
+          "net": "RADAR_RX_ESP",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "D2",
+          "net": "RADAR_RX_SWITCH",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        {
+          "number": "8",
+          "name": "D3",
+          "net": "RADAR_OUT_ESP",
+          "type": "passive"
+        },
+        {
+          "number": "9",
+          "name": "S3",
+          "net": "RADAR_OUT_LIMIT",
+          "type": "passive"
+        },
+        {
+          "number": "10",
+          "name": "SEL3",
+          "net": "SENSOR_ENABLE",
+          "type": "input"
+        },
+        {
+          "number": "11",
+          "name": "D4",
+          "net": "MQ_ADC",
+          "type": "passive"
+        },
+        {
+          "number": "12",
+          "name": "S4",
+          "net": "MQ_ADC_FILTER",
+          "type": "passive"
+        },
+        {
+          "number": "13",
+          "name": "SEL4",
+          "net": "SENSOR_ENABLE",
+          "type": "input"
+        },
+        {
+          "number": "14",
+          "name": "VDD",
+          "net": "+3V3",
+          "type": "power_in"
+        }
+      ],
+      "section": "LD2410C Radar",
+      "uuid": "84f523f5-d60c-50bd-a2ea-a999766563d4",
+      "dnp": false,
+      "description": "Four powered-off protected SPST switches; SEL tied to SENSOR_5V, fail-safe 5.5V controls",
+      "position": [
+        29,
+        43,
+        0
+      ]
+    },
+    {
+      "ref": "C2",
+      "value": "100nF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "LD2410C Radar",
+      "uuid": "f343c253-de07-514d-8885-31f9f38e346b",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        29,
+        37,
+        0
+      ]
+    },
+    {
+      "ref": "R20",
+      "value": "10k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SENSOR_ENABLE",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "1770b5a8-bff7-5cc7-87a4-3a2e2a8d604e",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        28,
+        34,
+        0
+      ]
+    },
+    {
+      "ref": "R9",
+      "value": "1k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RADAR_TX",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "RADAR_TX_LIMIT",
+          "type": "passive"
+        }
+      ],
+      "section": "LD2410C Radar",
+      "uuid": "35bb3b23-67e3-53ec-8ab1-dda6104b1061",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        28.5,
+        51,
+        0
+      ]
+    },
+    {
+      "ref": "R10",
+      "value": "1k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RADAR_RX_SWITCH",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "RADAR_RX",
+          "type": "passive"
+        }
+      ],
+      "section": "LD2410C Radar",
+      "uuid": "d1664359-bc3d-516c-9ddd-7ab4f5dceb97",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        28.5,
+        55,
+        0
+      ]
+    },
+    {
+      "ref": "R11",
+      "value": "1k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RADAR_OUT",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "RADAR_OUT_LIMIT",
+          "type": "passive"
+        }
+      ],
+      "section": "LD2410C Radar",
+      "uuid": "4ce3ca53-b265-575f-88a8-e23386bc703a",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        28.5,
+        59,
+        0
+      ]
+    },
+    {
+      "ref": "R12",
+      "value": "100k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RADAR_TX_ESP",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "LD2410C Radar",
+      "uuid": "b7fc46f1-ae60-5c24-ab6d-b1f27d97cc26",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        18,
+        38,
+        0
+      ]
+    },
+    {
+      "ref": "R13",
+      "value": "100k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RADAR_OUT_ESP",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "LD2410C Radar",
+      "uuid": "fd9bb4cc-1be7-5ce4-8306-8986479c5d5a",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        18,
+        42,
+        0
+      ]
+    },
+    {
+      "ref": "R14",
+      "value": "100k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RADAR_RX",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "LD2410C Radar",
+      "uuid": "f1012b51-e5b2-57ad-9764-67cba9797b9a",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        18,
+        46,
+        0
+      ]
+    },
+    {
+      "ref": "R15",
+      "value": "100k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "MQ_ADC",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "3000a882-c1c6-58b1-8d91-40b3a5ee29af",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        76,
+        55,
+        0
+      ]
+    },
+    {
+      "ref": "J6",
+      "value": "5V ONLY EXT SENSOR",
+      "footprint": "custom:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "pins": [
+        {
+          "number": "1",
+          "name": "EXT5V_RAW",
+          "net": "EXT_5V_RAW",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "e3e81840-3ff3-50cf-9947-8c5face28b19",
+      "dnp": false,
+      "description": "",
+      "position": [
+        90,
+        82,
+        0
+      ]
+    },
+    {
+      "ref": "Q2",
+      "value": "AO3401A",
+      "footprint": "custom:SOT-23",
+      "pins": [
+        {
+          "number": "1",
+          "name": "G",
+          "net": "GND",
+          "type": "input"
+        },
+        {
+          "number": "2",
+          "name": "S",
+          "net": "EXT_5V",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "D",
+          "net": "EXT_5V_RAW",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "fa2ed4fd-66d9-5645-be9b-8e5e1d60d9ec",
+      "dnp": false,
+      "description": "P-MOS reverse polarity protection, source on protected output; body diode raw -> protected",
+      "position": [
+        103,
+        80,
+        0
+      ]
+    },
+    {
+      "ref": "JP3",
+      "value": "USB / SENSOR / EXT",
+      "footprint": "custom:POWER_SELECT_1x03",
+      "pins": [
+        {
+          "number": "1",
+          "name": "USB",
+          "net": "ESP32_5V",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "SENSOR",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "EXT",
+          "net": "EXT_5V",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "7fbd4888-ffff-52f6-b241-409d175f3270",
+      "dnp": false,
+      "description": "One rated shunt only: 1-2 USB, 2-3 EXT; never bridge all three",
+      "position": [
+        80,
+        78,
+        90
+      ]
+    },
+    {
+      "ref": "C3",
+      "value": "100uF 16V",
+      "footprint": "custom:CP_Radial_D6.3mm_P2.50mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "-",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "8d244652-63c5-54eb-9138-b9017f2f32e2",
+      "dnp": false,
+      "description": "Low ESR polarized electrolytic, 6.3mm diameter, 2.5mm pitch",
+      "position": [
+        82,
+        83,
+        0
+      ]
+    },
+    {
+      "ref": "C4",
+      "value": "10uF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "65ec73d0-77ec-5f67-ad3e-baf727003ccc",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        74,
+        82,
+        0
+      ]
+    },
+    {
+      "ref": "C5",
+      "value": "100nF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "d4913724-2f44-570f-95b6-4becb2aee514",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        74,
+        86,
+        0
+      ]
+    },
+    {
+      "ref": "C6",
+      "value": "10uF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "LD2410C Radar",
+      "uuid": "df804e26-21a3-52bd-8aac-aa23c00a6679",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        32,
+        64,
+        90
+      ]
+    },
+    {
+      "ref": "C7",
+      "value": "100nF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "LD2410C Radar",
+      "uuid": "9ea9280c-32fd-5020-87b0-49c81d7a230f",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        27,
+        64,
+        90
+      ]
+    },
+    {
+      "ref": "C8",
+      "value": "10uF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "622f2707-0c55-5df3-89fa-d68e39d187da",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        100,
+        72.5,
+        0
+      ]
+    },
+    {
+      "ref": "C9",
+      "value": "100nF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "MQ Gas Sensor",
+      "uuid": "53267725-827b-50d8-86ba-3d385590b97c",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        106,
+        72.5,
+        0
+      ]
+    },
+    {
+      "ref": "C10",
+      "value": "10uF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "dbefeb82-35fa-5af1-9c79-2a7a9e604e56",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        22,
+        29,
+        0
+      ]
+    },
+    {
+      "ref": "C11",
+      "value": "100nF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "734d1765-ff3a-557c-ba99-1e291e3b1c9d",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        28,
+        29,
+        0
+      ]
+    },
+    {
+      "ref": "R16",
+      "value": "2.2k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "D1_A",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "96f42dde-b343-524c-8c61-4e6dcaa36323",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        32,
+        84,
+        0
+      ]
+    },
+    {
+      "ref": "D1",
+      "value": "GREEN",
+      "footprint": "custom:LED_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "D1_A",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "cf99d8dc-196d-5e13-9c04-0ad4ef50a029",
+      "dnp": false,
+      "description": "",
+      "position": [
+        32,
+        87,
+        0
+      ]
+    },
+    {
+      "ref": "R17",
+      "value": "2.2k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "D2_A",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "3fbde8c9-c986-5658-8f8d-775843fd959e",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        7,
+        46,
+        0
+      ]
+    },
+    {
+      "ref": "D2",
+      "value": "AMBER",
+      "footprint": "custom:LED_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "D2_A",
+          "type": "passive"
+        }
+      ],
+      "section": "Power",
+      "uuid": "ed3c0743-340c-59d9-9bce-2fdf02bfe9a4",
+      "dnp": false,
+      "description": "",
+      "position": [
+        13,
+        46,
+        0
+      ]
+    },
+    {
+      "ref": "J7",
+      "value": "EXT I2C",
+      "footprint": "custom:EXT_I2C_1x04",
+      "pins": [
+        {
+          "number": "1",
+          "name": "3V3",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "SDA",
+          "net": "I2C_SDA",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "SCL",
+          "net": "I2C_SCL",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "915dd7b7-6b28-57e6-9a04-9dade27bf0cb",
+      "dnp": false,
+      "description": "",
+      "position": [
+        32,
+        12,
+        0
+      ]
+    },
+    {
+      "ref": "J8",
+      "value": "GPIO6",
+      "footprint": "custom:GPIO_1x03",
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "3V3",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "IO6",
+          "net": "GPIO6",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "a425d568-ca08-551e-9f4b-a01ff75e6637",
+      "dnp": false,
+      "description": "",
+      "position": [
+        78,
+        8,
+        0
+      ]
+    },
+    {
+      "ref": "J9",
+      "value": "GPIO7",
+      "footprint": "custom:GPIO_1x03",
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "3V3",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "IO7",
+          "net": "GPIO7",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "aa2597be-da51-5259-a504-0552dbc4f25c",
+      "dnp": false,
+      "description": "",
+      "position": [
+        78,
+        18,
+        0
+      ]
+    },
+    {
+      "ref": "J10",
+      "value": "GPIO10",
+      "footprint": "custom:GPIO_1x03",
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "3V3",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "IO10",
+          "net": "GPIO10",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "bbf5e235-2841-55b9-90be-f02e28f65c89",
+      "dnp": false,
+      "description": "",
+      "position": [
+        78,
+        32,
+        0
+      ]
+    },
+    {
+      "ref": "J11",
+      "value": "GPIO11",
+      "footprint": "custom:GPIO_1x03",
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "3V3",
+          "net": "+3V3",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "IO11",
+          "net": "GPIO11",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "bb165c5e-e40a-5bd4-8b0f-6622fc839349",
+      "dnp": false,
+      "description": "",
+      "position": [
+        78,
+        42,
+        0
+      ]
+    },
+    {
+      "ref": "J12",
+      "value": "SERVO",
+      "footprint": "custom:SERVO_1x03",
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "5V_SERVO",
+          "net": "5V_SERVO",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "SIGNAL",
+          "net": "SERVO_SIGNAL",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "9a07436f-0c64-57d1-a44c-52ea46a613b6",
+      "dnp": false,
+      "description": "",
+      "position": [
+        8,
+        73,
+        90
+      ]
+    },
+    {
+      "ref": "J13",
+      "value": "5V ONLY SERVO",
+      "footprint": "custom:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "pins": [
+        {
+          "number": "1",
+          "name": "SERVO5V_RAW",
+          "net": "SERVO_5V_RAW",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "577dadee-c37e-502c-b8f4-49db7c90a711",
+      "dnp": false,
+      "description": "",
+      "position": [
+        18,
+        80,
+        0
+      ]
+    },
+    {
+      "ref": "Q3",
+      "value": "AO3401A",
+      "footprint": "custom:SOT-23",
+      "pins": [
+        {
+          "number": "1",
+          "name": "G",
+          "net": "GND",
+          "type": "input"
+        },
+        {
+          "number": "2",
+          "name": "S",
+          "net": "5V_SERVO",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "D",
+          "net": "SERVO_5V_RAW",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "565302da-3e2f-58ca-bc95-43aed150336a",
+      "dnp": false,
+      "description": "Independent servo rail reverse polarity protection",
+      "position": [
+        32,
+        80,
+        0
+      ]
+    },
+    {
+      "ref": "R18",
+      "value": "1k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SERVO_PWM",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SERVO_SIGNAL",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "f90aae5e-e140-5170-a80a-a0b76c9cb31c",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        32,
+        69,
+        90
+      ]
+    },
+    {
+      "ref": "R19",
+      "value": "100k",
+      "footprint": "custom:R_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SERVO_SIGNAL",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "c8657e01-5d12-5843-ad50-2ce7e454e3ff",
+      "dnp": false,
+      "description": "1206, 1%, 0.25 W",
+      "position": [
+        25,
+        70,
+        0
+      ]
+    },
+    {
+      "ref": "C12",
+      "value": "10uF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "5V_SERVO",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "87a2f46f-1fdc-58ce-9cc6-7658ee7a7ad0",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        12,
+        87,
+        0
+      ]
+    },
+    {
+      "ref": "C13",
+      "value": "100nF",
+      "footprint": "custom:C_1206_3216Metric",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+",
+          "net": "5V_SERVO",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "Expansion",
+      "uuid": "d8e774c2-21b6-5495-b70a-33c26aebe6ee",
+      "dnp": false,
+      "description": "1206 X7R; 10uF >=16V; 100nF >=25V",
+      "position": [
+        19,
+        88,
+        0
+      ]
+    },
+    {
+      "ref": "TP1",
+      "value": "TP_5V",
+      "footprint": "custom:TESTPOINT_THT_1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TP_5V",
+          "net": "SENSOR_5V",
+          "type": "passive"
+        }
+      ],
+      "section": "Test Points",
+      "uuid": "4bc2042b-dbe2-51c5-85d6-2b796465fbc6",
+      "dnp": false,
+      "description": "1.5mm exposed pad with 0.7mm plated hole",
+      "position": [
+        100,
+        88,
+        0
+      ]
+    },
+    {
+      "ref": "TP2",
+      "value": "TP_3V3",
+      "footprint": "custom:TESTPOINT_THT_1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TP_3V3",
+          "net": "+3V3",
+          "type": "passive"
+        }
+      ],
+      "section": "Test Points",
+      "uuid": "3a3e462c-2fbb-50e9-84cc-8ba3d07ae54c",
+      "dnp": false,
+      "description": "1.5mm exposed pad with 0.7mm plated hole",
+      "position": [
+        32,
+        25,
+        0
+      ]
+    },
+    {
+      "ref": "TP3",
+      "value": "TP_GND",
+      "footprint": "custom:TESTPOINT_THT_1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TP_GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      ],
+      "section": "Test Points",
+      "uuid": "5ccb00ae-50c3-5d6a-8b73-637d68e670c0",
+      "dnp": false,
+      "description": "1.5mm exposed pad with 0.7mm plated hole",
+      "position": [
+        32,
+        29,
+        0
+      ]
+    },
+    {
+      "ref": "TP4",
+      "value": "TP_SDA",
+      "footprint": "custom:TESTPOINT_THT_1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TP_SDA",
+          "net": "I2C_SDA",
+          "type": "passive"
+        }
+      ],
+      "section": "Test Points",
+      "uuid": "266d3401-cda8-5699-ae20-437f4ab860c0",
+      "dnp": false,
+      "description": "1.5mm exposed pad with 0.7mm plated hole",
+      "position": [
+        32,
+        22.5,
+        0
+      ]
+    },
+    {
+      "ref": "TP5",
+      "value": "TP_SCL",
+      "footprint": "custom:TESTPOINT_THT_1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TP_SCL",
+          "net": "I2C_SCL",
+          "type": "passive"
+        }
+      ],
+      "section": "Test Points",
+      "uuid": "6d4dd45b-9bb3-50a0-9900-0286f7af1731",
+      "dnp": false,
+      "description": "1.5mm exposed pad with 0.7mm plated hole",
+      "position": [
+        32,
+        8,
+        0
+      ]
+    },
+    {
+      "ref": "TP6",
+      "value": "TP_LD_TX",
+      "footprint": "custom:TESTPOINT_THT_1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TP_LD_TX",
+          "net": "RADAR_TX",
+          "type": "passive"
+        }
+      ],
+      "section": "Test Points",
+      "uuid": "27563d28-c238-5b84-9dbf-3b0f8b50b7b2",
+      "dnp": false,
+      "description": "1.5mm exposed pad with 0.7mm plated hole",
+      "position": [
+        32,
+        51,
+        0
+      ]
+    },
+    {
+      "ref": "TP7",
+      "value": "TP_LD_RX",
+      "footprint": "custom:TESTPOINT_THT_1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TP_LD_RX",
+          "net": "RADAR_RX",
+          "type": "passive"
+        }
+      ],
+      "section": "Test Points",
+      "uuid": "910a28b2-174b-5601-981e-b3d1bda58b7b",
+      "dnp": false,
+      "description": "1.5mm exposed pad with 0.7mm plated hole",
+      "position": [
+        32,
+        55,
+        0
+      ]
+    },
+    {
+      "ref": "TP8",
+      "value": "TP_LD_OUT",
+      "footprint": "custom:TESTPOINT_THT_1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TP_LD_OUT",
+          "net": "RADAR_OUT",
+          "type": "passive"
+        }
+      ],
+      "section": "Test Points",
+      "uuid": "f5f0e426-32fa-5ad5-818d-241aa21f225a",
+      "dnp": false,
+      "description": "1.5mm exposed pad with 0.7mm plated hole",
+      "position": [
+        32,
+        59,
+        0
+      ]
+    },
+    {
+      "ref": "TP9",
+      "value": "TP_MQ_AO_RAW",
+      "footprint": "custom:TESTPOINT_THT_1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TP_MQ_AO_RAW",
+          "net": "MQ_AO_RAW",
+          "type": "passive"
+        }
+      ],
+      "section": "Test Points",
+      "uuid": "8632c867-8f75-5ec7-8713-081ead34c2f5",
+      "dnp": false,
+      "description": "1.5mm exposed pad with 0.7mm plated hole",
+      "position": [
+        107,
+        32,
+        0
+      ]
+    },
+    {
+      "ref": "TP10",
+      "value": "TP_MQ_ADC",
+      "footprint": "custom:TESTPOINT_THT_1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TP_MQ_ADC",
+          "net": "MQ_ADC",
+          "type": "passive"
+        }
+      ],
+      "section": "Test Points",
+      "uuid": "e417a3d9-7854-5a1b-a2d6-84362d43ec38",
+      "dnp": false,
+      "description": "1.5mm exposed pad with 0.7mm plated hole",
+      "position": [
+        107,
+        40,
+        0
+      ]
+    },
+    {
+      "ref": "TP11",
+      "value": "TP_MQ_DO",
+      "footprint": "custom:TESTPOINT_THT_1.5mm",
+      "pins": [
+        {
+          "number": "1",
+          "name": "TP_MQ_DO",
+          "net": "MQ_DO_3V3",
+          "type": "passive"
+        }
+      ],
+      "section": "Test Points",
+      "uuid": "31662bb3-f277-5347-8581-f8820f5209c1",
+      "dnp": false,
+      "description": "1.5mm exposed pad with 0.7mm plated hole",
+      "position": [
+        107,
+        36,
+        0
+      ]
+    }
+  ],
+  "outline": [
+    [
+      0,
+      0
+    ],
+    [
+      110,
+      0
+    ],
+    [
+      110,
+      90
+    ],
+    [
+      70.5,
+      90
+    ],
+    [
+      70.5,
+      64.5
+    ],
+    [
+      39.5,
+      64.5
+    ],
+    [
+      39.5,
+      90
+    ],
+    [
+      0,
+      90
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "envelopes": {
+    "ESP32": [
+      41.03,
+      -0.5240019999999932,
+      68.97,
+      62.865
+    ],
+    "GY302": [
+      7,
+      7,
+      29,
+      26.4
+    ],
+    "BME688": [
+      82,
+      7,
+      104,
+      26.4
+    ],
+    "LD2410C": [
+      2,
+      49,
+      25.6,
+      65
+    ],
+    "MQ": [
+      80,
+      37,
+      106,
+      71.4
+    ]
+  },
+  "keepouts": {
+    "ESP32": [
+      44,
+      0,
+      66,
+      13.4
+    ],
+    "RADAR": [
+      0,
+      47.5,
+      19.5,
+      67
+    ]
+  },
+  "sensor_photo_review": {
+    "source": "sources/actual_sensor_modules.jpg",
+    "BME688_back_view_order_user_confirmed": [
+      "CS",
+      "SDO",
+      "SDA",
+      "SCL",
+      "GND",
+      "VCC"
+    ],
+    "BME688_sensing_face_up_order": [
+      "VCC",
+      "GND",
+      "SCL",
+      "SDA",
+      "SDO",
+      "CS"
+    ],
+    "mounting_assumption": "Horizontal modules; sensing face up; bodies above socket row in carrier top view. Right-angle module headers must be replaced with downward straight headers.",
+    "GY302_change": "J2 pin nets mirrored for sensing-face-up placement",
+    "MQ_change": "J5 pin nets mirrored for sensing-face-up placement",
+    "physical_fit_verified": false
+  }
+}

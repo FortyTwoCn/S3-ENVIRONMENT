@@ -1,0 +1,186 @@
+{
+  "release": "R1.1-PENDING",
+  "status": "SOCKET_GEOMETRY_NETLIST_AND_PHOTO_VIEW_PASS_PHYSICAL_VERIFICATION_PENDING",
+  "source_photo": "sources/actual_sensor_modules.jpg",
+  "source_photo_sha256": "2837105d297a4d36dbb44d2abe52ad6ee531dd07bcdb7d1f24f5071f597b93ba",
+  "BME_back_order_user_text_confirmed": [
+    "CS",
+    "SDO",
+    "SDA",
+    "SCL",
+    "GND",
+    "VCC"
+  ],
+  "mounting": "Horizontal; sensing faces UP; GY/BME/MQ body above socket row in carrier top view. Radar face up, body to the left of its vertical socket.",
+  "changed_socket_nets": [
+    "J2.1",
+    "J2.2",
+    "J2.4",
+    "J2.5",
+    "J5.1",
+    "J5.2",
+    "J5.3",
+    "J5.4"
+  ],
+  "GPIO_changed": false,
+  "BME_geometry_changed": false,
+  "checks": [
+    {
+      "socket": "J2",
+      "status": "PASS",
+      "top_view_pin1_to_last": [
+        "ADDR",
+        "SDA",
+        "SCL",
+        "GND",
+        "VCC"
+      ],
+      "single_row": true,
+      "pitch_mm": 2.54,
+      "pin_count": 5,
+      "first_to_last_center_distance_mm": 10.16,
+      "pin_coordinates_mm": [
+        [
+          9.0,
+          25.0
+        ],
+        [
+          11.54,
+          25.0
+        ],
+        [
+          14.08,
+          25.0
+        ],
+        [
+          16.62,
+          25.0
+        ],
+        [
+          19.16,
+          25.0
+        ]
+      ]
+    },
+    {
+      "socket": "J3",
+      "status": "PASS",
+      "top_view_pin1_to_last": [
+        "VCC",
+        "GND",
+        "SCL",
+        "SDA",
+        "SDO",
+        "CS"
+      ],
+      "single_row": true,
+      "pitch_mm": 2.54,
+      "pin_count": 6,
+      "first_to_last_center_distance_mm": 12.700000000000003,
+      "pin_coordinates_mm": [
+        [
+          84.0,
+          25.0
+        ],
+        [
+          86.54,
+          25.0
+        ],
+        [
+          89.08,
+          25.0
+        ],
+        [
+          91.62,
+          25.0
+        ],
+        [
+          94.16,
+          25.0
+        ],
+        [
+          96.7,
+          25.0
+        ]
+      ]
+    },
+    {
+      "socket": "J5",
+      "status": "PASS",
+      "top_view_pin1_to_last": [
+        "VCC",
+        "GND",
+        "DO",
+        "AO"
+      ],
+      "single_row": true,
+      "pitch_mm": 2.54,
+      "pin_count": 4,
+      "first_to_last_center_distance_mm": 7.6200000000000045,
+      "pin_coordinates_mm": [
+        [
+          85.0,
+          70.0
+        ],
+        [
+          87.54,
+          70.0
+        ],
+        [
+          90.08,
+          70.0
+        ],
+        [
+          92.62,
+          70.0
+        ]
+      ]
+    },
+    {
+      "socket": "J4",
+      "status": "PASS",
+      "top_view_pin1_to_last": [
+        "TX",
+        "RX",
+        "OUT",
+        "GND",
+        "VCC"
+      ],
+      "single_row": true,
+      "pitch_mm": 2.54,
+      "pin_count": 5,
+      "first_to_last_center_distance_mm": 10.159999999999997,
+      "pin_coordinates_mm": [
+        [
+          24.0,
+          52.0
+        ],
+        [
+          24.0,
+          54.54
+        ],
+        [
+          24.0,
+          57.08
+        ],
+        [
+          24.0,
+          59.62
+        ],
+        [
+          24.0,
+          62.16
+        ]
+      ]
+    }
+  ],
+  "pending": [
+    "Complete GY/MQ physical silk check: some labels covered in photograph",
+    "Straight downward module male headers for horizontal mounting; replace MQ right-angle header",
+    "Fit straight downward 1x5 header to radar",
+    "Actual module dimensions, body-to-header offsets and heights",
+    "Actual assembly on 100% printed mechanical drawings"
+  ],
+  "physical_verified": false,
+  "hardware_tested": false
+}

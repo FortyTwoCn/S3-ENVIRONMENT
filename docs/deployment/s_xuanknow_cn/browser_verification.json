@@ -1,0 +1,13 @@
+{
+  "pass_count": 6,
+  "checks": [
+    "Browser login and live WebSocket",
+    "Real device shown offline awaiting hardware",
+    "Storage and device configuration defaults",
+    "390px mobile layout has no horizontal overflow",
+    "Logout returns to password page",
+    "No browser JavaScript errors"
+  ],
+  "javascript_errors": [],
+  "network": "Encrypted SSH forwarding, browser domain unchanged"
+}

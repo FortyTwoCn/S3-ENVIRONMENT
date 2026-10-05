@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "environments": [
+    {
+      "environment": "yd_uart",
+      "status": "PASS",
+      "chip": "ESP32-S3",
+      "flash": "16MB",
+      "psram_configuration": "OPI 8MB; physically validated on COM4",
+      "files": {
+        "bootloader.bin": {
+          "bytes": 15104,
+          "sha256": "2a71d69b471e20c2bac7fb469f3c6a807b3ebee780e348e5889db0da849ca363"
+        },
+        "boot_app0.bin": {
+          "bytes": 8192,
+          "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0"
+        },
+        "firmware.bin": {
+          "bytes": 987616,
+          "sha256": "ffabea158b90b27387ac4adf57ee25d9856a4179c3957f5689a3efdcfbe3abbc"
+        },
+        "merged_flash.bin": {
+          "bytes": 1053152,
+          "sha256": "25e8de3e60d3bc1306b3cf41384ead5cd66eaa6d7e955712731acbb878b3812a"
+        },
+        "partitions.bin": {
+          "bytes": 3072,
+          "sha256": "6731888b421c3946dac16356659877021e0f46dbd1c55abafa17989eb7265387"
+        }
+      }
+    },
+    {
+      "environment": "yd_native_usb",
+      "status": "PASS",
+      "chip": "ESP32-S3",
+      "flash": "16MB",
+      "psram_configuration": "OPI 8MB; this USB variant has not been physically validated",
+      "files": {
+        "bootloader.bin": {
+          "bytes": 15104,
+          "sha256": "2a71d69b471e20c2bac7fb469f3c6a807b3ebee780e348e5889db0da849ca363"
+        },
+        "boot_app0.bin": {
+          "bytes": 8192,
+          "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0"
+        },
+        "firmware.bin": {
+          "bytes": 992272,
+          "sha256": "5938c505f9ffc49d9cd7dbfb2d614ecf96078c1c7dc027b107e36e84dffa42e6"
+        },
+        "merged_flash.bin": {
+          "bytes": 1057808,
+          "sha256": "8d720d4765de8934a3ddd2c14f32767ca448f12fdf10904b551d781153433cc9"
+        },
+        "partitions.bin": {
+          "bytes": 3072,
+          "sha256": "6731888b421c3946dac16356659877021e0f46dbd1c55abafa17989eb7265387"
+        }
+      }
+    }
+  ],
+  "framework": "Arduino ESP32 2.0.17 / PlatformIO espressif32 6.12.0",
+  "source_sha256": "81d80e6e751cba5b1305ffa61929de1d8c1d06ab3d41cdac15c07fdf4b8cbb68",
+  "physical_flash_test": "see physical_flash.json"
+}

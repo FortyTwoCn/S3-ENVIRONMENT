@@ -1,0 +1,2243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\xsx20\Documents\Codex\2026-10-02\ni\outputs\hardware\esp32_sensor_carrier.kicad_sch</source>
+    <date>2026-10-02T14:54:52+0800</date>
+    <tool>Eeschema 9.0.9</tool>
+    <textvar name="DESIGN_STATUS">MECHANICAL_DIMENSION_PENDING</textvar>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>ESP32-S3 Multi-Sensor Carrier</title>
+        <company/>
+        <rev>R1.1-PENDING</rev>
+        <date/>
+        <source>esp32_sensor_carrier.kicad_sch</source>
+        <comment number="1" value="Pluggable 44-pin board; photo spacing 25.40mm"/>
+        <comment number="2" value="MECHANICAL_DIMENSION_PENDING"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100nF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ada74776-1624-5a0a-8869-4a9a589fb7ac</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f343c253-de07-514d-8885-31f9f38e346b</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>100uF 16V</value>
+      <footprint>custom:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">custom:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C3" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8d244652-63c5-54eb-9138-b9017f2f32e2</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>10uF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C4" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>65ec73d0-77ec-5f67-ad3e-baf727003ccc</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>100nF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C5" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d4913724-2f44-570f-95b6-4becb2aee514</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>10uF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C6" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>df804e26-21a3-52bd-8aac-aa23c00a6679</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>100nF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C7" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ea9280c-32fd-5020-87b0-49c81d7a230f</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>10uF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C8" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>622f2707-0c55-5df3-89fa-d68e39d187da</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C9" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>53267725-827b-50d8-86ba-3d385590b97c</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>10uF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C10" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dbefeb82-35fa-5af1-9c79-2a7a9e604e56</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>100nF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C11" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>734d1765-ff3a-557c-ba99-1e291e3b1c9d</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>10uF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C12" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>87a2f46f-1fdc-58ce-9cc6-7658ee7a7ad0</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>100nF</value>
+      <footprint>custom:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="C13" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d8e774c2-21b6-5495-b70a-33c26aebe6ee</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>GREEN</value>
+      <footprint>custom:LED_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:LED_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="D1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cf99d8dc-196d-5e13-9c04-0ad4ef50a029</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>AMBER</value>
+      <footprint>custom:LED_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:LED_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="D2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ed3c0743-340c-59d9-9bce-2fdf02bfe9a4</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>ESP32-S3 N16R8 / USER MODULE</value>
+      <footprint>custom:ESP32-S3_N16R8_44PIN_CARRIER</footprint>
+      <fields>
+        <field name="Footprint">custom:ESP32-S3_N16R8_44PIN_CARRIER</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4e04c812-3e89-535b-8068-b9d55c1bbd66</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>GY-302 BH1750</value>
+      <footprint>custom:GY-302_BH1750_SOCKET</footprint>
+      <fields>
+        <field name="Footprint">custom:GY-302_BH1750_SOCKET</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6bf24c00-578c-5a16-98d9-8004050e11f6</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>BME688</value>
+      <footprint>custom:BME688_SOCKET</footprint>
+      <fields>
+        <field name="Footprint">custom:BME688_SOCKET</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J3" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8d942cda-6e09-5040-b1ae-7cd46c4b3652</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>LD2410C</value>
+      <footprint>custom:LD2410C_SOCKET</footprint>
+      <fields>
+        <field name="Footprint">custom:LD2410C_SOCKET</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J4" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2330eccb-1942-59f3-b3df-5df5caa79fbc</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>MQ GAS</value>
+      <footprint>custom:MQ_GAS_SOCKET</footprint>
+      <fields>
+        <field name="Footprint">custom:MQ_GAS_SOCKET</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J5" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9cebb546-345c-5cc2-921b-9b489c1e2c2c</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>5V ONLY EXT SENSOR</value>
+      <footprint>custom:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">custom:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J6" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e3e81840-3ff3-50cf-9947-8c5face28b19</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>EXT I2C</value>
+      <footprint>custom:EXT_I2C_1x04</footprint>
+      <fields>
+        <field name="Footprint">custom:EXT_I2C_1x04</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J7" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>915dd7b7-6b28-57e6-9a04-9dade27bf0cb</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>GPIO6</value>
+      <footprint>custom:GPIO_1x03</footprint>
+      <fields>
+        <field name="Footprint">custom:GPIO_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J8" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a425d568-ca08-551e-9f4b-a01ff75e6637</tstamps>
+    </comp>
+    <comp ref="J9">
+      <value>GPIO7</value>
+      <footprint>custom:GPIO_1x03</footprint>
+      <fields>
+        <field name="Footprint">custom:GPIO_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J9" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>aa2597be-da51-5259-a504-0552dbc4f25c</tstamps>
+    </comp>
+    <comp ref="J10">
+      <value>GPIO10</value>
+      <footprint>custom:GPIO_1x03</footprint>
+      <fields>
+        <field name="Footprint">custom:GPIO_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J10" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bbf5e235-2841-55b9-90be-f02e28f65c89</tstamps>
+    </comp>
+    <comp ref="J11">
+      <value>GPIO11</value>
+      <footprint>custom:GPIO_1x03</footprint>
+      <fields>
+        <field name="Footprint">custom:GPIO_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J11" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bb165c5e-e40a-5bd4-8b0f-6622fc839349</tstamps>
+    </comp>
+    <comp ref="J12">
+      <value>SERVO</value>
+      <footprint>custom:SERVO_1x03</footprint>
+      <fields>
+        <field name="Footprint">custom:SERVO_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J12" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9a07436f-0c64-57d1-a44c-52ea46a613b6</tstamps>
+    </comp>
+    <comp ref="J13">
+      <value>5V ONLY SERVO</value>
+      <footprint>custom:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">custom:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="J13" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>577dadee-c37e-502c-b8f4-49db7c90a711</tstamps>
+    </comp>
+    <comp ref="JP1">
+      <value>GND DEFAULT / 3V3 OPTION</value>
+      <footprint>custom:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="JP1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8053de02-c64b-59c9-90ba-77cf51c72e98</tstamps>
+    </comp>
+    <comp ref="JP2">
+      <value>GND DEFAULT / 3V3 OPTION</value>
+      <footprint>custom:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="JP2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2437c673-d105-5efe-aaa7-5632931998cc</tstamps>
+    </comp>
+    <comp ref="JP3">
+      <value>USB / SENSOR / EXT</value>
+      <footprint>custom:POWER_SELECT_1x03</footprint>
+      <fields>
+        <field name="Footprint">custom:POWER_SELECT_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="JP3" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7fbd4888-ffff-52f6-b241-409d175f3270</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>AO3400A</value>
+      <footprint>custom:SOT-23</footprint>
+      <fields>
+        <field name="Footprint">custom:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="Q1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e440b524-e23b-54d1-a826-2840be05edda</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>AO3401A</value>
+      <footprint>custom:SOT-23</footprint>
+      <fields>
+        <field name="Footprint">custom:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="Q2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fa2ed4fd-66d9-5645-be9b-8e5e1d60d9ec</tstamps>
+    </comp>
+    <comp ref="Q3">
+      <value>AO3401A</value>
+      <footprint>custom:SOT-23</footprint>
+      <fields>
+        <field name="Footprint">custom:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="Q3" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>565302da-3e2f-58ca-bc95-43aed150336a</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>48ce6167-0811-589d-b979-6c31565b73a2</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>4.7k DNP</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>12995643-5b79-5b79-a86f-7341b4532db6</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>4.7k DNP</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R3" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e6fc2f23-5b4b-51e5-bd03-3e5c5fe16a40</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>6.8k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R4" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2b99cbe2-f580-5682-9000-fa78034ba781</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>7.5k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R5" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>03b34c11-a8e4-5f50-8dab-089e760c2b85</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>33k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R6" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0000695f-3fbd-5252-a2d9-84228050b869</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>100k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R7" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e708a87e-5f27-5e45-bac8-e1b858d1049a</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>10k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R8" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ba02a697-e1c4-5ead-94a9-2780b6b3d7ed</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R9" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>35bb3b23-67e3-53ec-8ab1-dda6104b1061</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>1k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R10" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d1664359-bc3d-516c-9ddd-7ab4f5dceb97</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>1k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R11" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4ce3ca53-b265-575f-88a8-e23386bc703a</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>100k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R12" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7fc46f1-ae60-5c24-ab6d-b1f27d97cc26</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>100k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R13" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fd9bb4cc-1be7-5ce4-8306-8986479c5d5a</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>100k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R14" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1012b51-e5b2-57ad-9764-67cba9797b9a</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>100k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R15" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3000a882-c1c6-58b1-8d91-40b3a5ee29af</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>2.2k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R16" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>96f42dde-b343-524c-8c61-4e6dcaa36323</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>2.2k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R17" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3fbde8c9-c986-5658-8f8d-775843fd959e</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>1k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R18" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f90aae5e-e140-5170-a80a-a0b76c9cb31c</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>100k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R19" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c8657e01-5d12-5843-ad50-2ce7e454e3ff</tstamps>
+    </comp>
+    <comp ref="R20">
+      <value>10k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R20" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1770b5a8-bff7-5cc7-87a4-3a2e2a8d604e</tstamps>
+    </comp>
+    <comp ref="R21">
+      <value>10k</value>
+      <footprint>custom:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="R21" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>db4fb394-e4a6-52a7-996d-a46374de4309</tstamps>
+    </comp>
+    <comp ref="TP1">
+      <value>TP_5V</value>
+      <footprint>custom:TESTPOINT_THT_1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="TP1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4bc2042b-dbe2-51c5-85d6-2b796465fbc6</tstamps>
+    </comp>
+    <comp ref="TP2">
+      <value>TP_3V3</value>
+      <footprint>custom:TESTPOINT_THT_1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="TP2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3a3e462c-2fbb-50e9-84cc-8ba3d07ae54c</tstamps>
+    </comp>
+    <comp ref="TP3">
+      <value>TP_GND</value>
+      <footprint>custom:TESTPOINT_THT_1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="TP3" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5ccb00ae-50c3-5d6a-8b73-637d68e670c0</tstamps>
+    </comp>
+    <comp ref="TP4">
+      <value>TP_SDA</value>
+      <footprint>custom:TESTPOINT_THT_1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="TP4" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>266d3401-cda8-5699-ae20-437f4ab860c0</tstamps>
+    </comp>
+    <comp ref="TP5">
+      <value>TP_SCL</value>
+      <footprint>custom:TESTPOINT_THT_1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="TP5" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6d4dd45b-9bb3-50a0-9900-0286f7af1731</tstamps>
+    </comp>
+    <comp ref="TP6">
+      <value>TP_LD_TX</value>
+      <footprint>custom:TESTPOINT_THT_1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="TP6" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>27563d28-c238-5b84-9dbf-3b0f8b50b7b2</tstamps>
+    </comp>
+    <comp ref="TP7">
+      <value>TP_LD_RX</value>
+      <footprint>custom:TESTPOINT_THT_1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="TP7" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>910a28b2-174b-5601-981e-b3d1bda58b7b</tstamps>
+    </comp>
+    <comp ref="TP8">
+      <value>TP_LD_OUT</value>
+      <footprint>custom:TESTPOINT_THT_1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="TP8" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f5f0e426-32fa-5ad5-818d-241aa21f225a</tstamps>
+    </comp>
+    <comp ref="TP9">
+      <value>TP_MQ_AO_RAW</value>
+      <footprint>custom:TESTPOINT_THT_1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="TP9" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8632c867-8f75-5ec7-8713-081ead34c2f5</tstamps>
+    </comp>
+    <comp ref="TP10">
+      <value>TP_MQ_ADC</value>
+      <footprint>custom:TESTPOINT_THT_1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="TP10" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e417a3d9-7854-5a1b-a2d6-84362d43ec38</tstamps>
+    </comp>
+    <comp ref="TP11">
+      <value>TP_MQ_DO</value>
+      <footprint>custom:TESTPOINT_THT_1.5mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="TP11" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>31662bb3-f277-5347-8581-f8820f5209c1</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>TMUX1511PWR</value>
+      <footprint>custom:TSSOP-14_4.4x5mm_P0.65mm</footprint>
+      <fields>
+        <field name="Footprint">custom:TSSOP-14_4.4x5mm_P0.65mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Carrier" part="U1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32_sensor_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>84f523f5-d60c-50bd-a2ea-a999766563d4</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Carrier" part="C1">
+      <fields>
+        <field name="Reference">C1</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C10">
+      <fields>
+        <field name="Reference">C10</field>
+        <field name="Value">10uF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C11">
+      <fields>
+        <field name="Reference">C11</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C12">
+      <fields>
+        <field name="Reference">C12</field>
+        <field name="Value">10uF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C13">
+      <fields>
+        <field name="Reference">C13</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C2">
+      <fields>
+        <field name="Reference">C2</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C3">
+      <fields>
+        <field name="Reference">C3</field>
+        <field name="Value">100uF 16V</field>
+        <field name="Footprint">custom:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C4">
+      <fields>
+        <field name="Reference">C4</field>
+        <field name="Value">10uF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C5">
+      <fields>
+        <field name="Reference">C5</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C6">
+      <fields>
+        <field name="Reference">C6</field>
+        <field name="Value">10uF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C7">
+      <fields>
+        <field name="Reference">C7</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C8">
+      <fields>
+        <field name="Reference">C8</field>
+        <field name="Value">10uF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="C9">
+      <fields>
+        <field name="Reference">C9</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint">custom:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="D1">
+      <fields>
+        <field name="Reference">D1</field>
+        <field name="Value">GREEN</field>
+        <field name="Footprint">custom:LED_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="D2">
+      <fields>
+        <field name="Reference">D2</field>
+        <field name="Value">AMBER</field>
+        <field name="Footprint">custom:LED_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J1">
+      <fields>
+        <field name="Reference">J1</field>
+        <field name="Value">ESP32-S3 N16R8 / USER MODULE</field>
+        <field name="Footprint">custom:ESP32-S3_N16R8_44PIN_CARRIER</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="power_out"/>
+        <pin num="2" name="3V3" type="passive"/>
+        <pin num="3" name="RST" type="bidirectional"/>
+        <pin num="4" name="4" type="input"/>
+        <pin num="5" name="5" type="input"/>
+        <pin num="6" name="6" type="bidirectional"/>
+        <pin num="7" name="7" type="bidirectional"/>
+        <pin num="8" name="15" type="bidirectional"/>
+        <pin num="9" name="16" type="input"/>
+        <pin num="10" name="17" type="input"/>
+        <pin num="11" name="18" type="output"/>
+        <pin num="12" name="8" type="bidirectional"/>
+        <pin num="13" name="3" type="bidirectional"/>
+        <pin num="14" name="46" type="bidirectional"/>
+        <pin num="15" name="9" type="bidirectional"/>
+        <pin num="16" name="10" type="bidirectional"/>
+        <pin num="17" name="11" type="bidirectional"/>
+        <pin num="18" name="12" type="output"/>
+        <pin num="19" name="13" type="bidirectional"/>
+        <pin num="20" name="14" type="bidirectional"/>
+        <pin num="21" name="5V" type="power_out"/>
+        <pin num="22" name="GND" type="passive"/>
+        <pin num="23" name="GND" type="passive"/>
+        <pin num="24" name="TX43" type="bidirectional"/>
+        <pin num="25" name="RX44" type="bidirectional"/>
+        <pin num="26" name="1" type="bidirectional"/>
+        <pin num="27" name="2" type="bidirectional"/>
+        <pin num="28" name="42" type="bidirectional"/>
+        <pin num="29" name="41" type="bidirectional"/>
+        <pin num="30" name="40" type="bidirectional"/>
+        <pin num="31" name="39" type="bidirectional"/>
+        <pin num="32" name="38" type="bidirectional"/>
+        <pin num="33" name="37" type="bidirectional"/>
+        <pin num="34" name="36" type="bidirectional"/>
+        <pin num="35" name="35" type="bidirectional"/>
+        <pin num="36" name="0" type="bidirectional"/>
+        <pin num="37" name="45" type="bidirectional"/>
+        <pin num="38" name="48" type="bidirectional"/>
+        <pin num="39" name="47" type="bidirectional"/>
+        <pin num="40" name="21" type="bidirectional"/>
+        <pin num="41" name="20" type="bidirectional"/>
+        <pin num="42" name="19" type="bidirectional"/>
+        <pin num="43" name="GND" type="passive"/>
+        <pin num="44" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J10">
+      <fields>
+        <field name="Reference">J10</field>
+        <field name="Value">GPIO10</field>
+        <field name="Footprint">custom:GPIO_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="3V3" type="passive"/>
+        <pin num="3" name="IO10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J11">
+      <fields>
+        <field name="Reference">J11</field>
+        <field name="Value">GPIO11</field>
+        <field name="Footprint">custom:GPIO_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="3V3" type="passive"/>
+        <pin num="3" name="IO11" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J12">
+      <fields>
+        <field name="Reference">J12</field>
+        <field name="Value">SERVO</field>
+        <field name="Footprint">custom:SERVO_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="5V_SERVO" type="passive"/>
+        <pin num="3" name="SIGNAL" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J13">
+      <fields>
+        <field name="Reference">J13</field>
+        <field name="Value">5V ONLY SERVO</field>
+        <field name="Footprint">custom:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SERVO5V_RAW" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J2">
+      <fields>
+        <field name="Reference">J2</field>
+        <field name="Value">GY-302 BH1750</field>
+        <field name="Footprint">custom:GY-302_BH1750_SOCKET</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="ADDR" type="input"/>
+        <pin num="2" name="SDA" type="bidirectional"/>
+        <pin num="3" name="SCL" type="input"/>
+        <pin num="4" name="GND" type="passive"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J3">
+      <fields>
+        <field name="Reference">J3</field>
+        <field name="Value">BME688</field>
+        <field name="Footprint">custom:BME688_SOCKET</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="SCL" type="input"/>
+        <pin num="4" name="SDA" type="bidirectional"/>
+        <pin num="5" name="SDO" type="input"/>
+        <pin num="6" name="CS" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J4">
+      <fields>
+        <field name="Reference">J4</field>
+        <field name="Value">LD2410C</field>
+        <field name="Footprint">custom:LD2410C_SOCKET</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TX" type="output"/>
+        <pin num="2" name="RX" type="input"/>
+        <pin num="3" name="OUT" type="output"/>
+        <pin num="4" name="GND" type="passive"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J5">
+      <fields>
+        <field name="Reference">J5</field>
+        <field name="Value">MQ GAS</field>
+        <field name="Footprint">custom:MQ_GAS_SOCKET</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="DO" type="open_collector"/>
+        <pin num="4" name="AO" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J6">
+      <fields>
+        <field name="Reference">J6</field>
+        <field name="Value">5V ONLY EXT SENSOR</field>
+        <field name="Footprint">custom:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="EXT5V_RAW" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J7">
+      <fields>
+        <field name="Reference">J7</field>
+        <field name="Value">EXT I2C</field>
+        <field name="Footprint">custom:EXT_I2C_1x04</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="SDA" type="passive"/>
+        <pin num="4" name="SCL" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J8">
+      <fields>
+        <field name="Reference">J8</field>
+        <field name="Value">GPIO6</field>
+        <field name="Footprint">custom:GPIO_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="3V3" type="passive"/>
+        <pin num="3" name="IO6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="J9">
+      <fields>
+        <field name="Reference">J9</field>
+        <field name="Value">GPIO7</field>
+        <field name="Footprint">custom:GPIO_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="3V3" type="passive"/>
+        <pin num="3" name="IO7" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="JP1">
+      <fields>
+        <field name="Reference">JP1</field>
+        <field name="Value">GND DEFAULT / 3V3 OPTION</field>
+        <field name="Footprint">custom:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="ADDR" type="passive"/>
+        <pin num="3" name="3V3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="JP2">
+      <fields>
+        <field name="Reference">JP2</field>
+        <field name="Value">GND DEFAULT / 3V3 OPTION</field>
+        <field name="Footprint">custom:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="ADDR" type="passive"/>
+        <pin num="3" name="3V3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="JP3">
+      <fields>
+        <field name="Reference">JP3</field>
+        <field name="Value">USB / SENSOR / EXT</field>
+        <field name="Footprint">custom:POWER_SELECT_1x03</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="USB" type="passive"/>
+        <pin num="2" name="SENSOR" type="passive"/>
+        <pin num="3" name="EXT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="Q1">
+      <fields>
+        <field name="Reference">Q1</field>
+        <field name="Value">AO3400A</field>
+        <field name="Footprint">custom:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="open_collector"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="Q2">
+      <fields>
+        <field name="Reference">Q2</field>
+        <field name="Value">AO3401A</field>
+        <field name="Footprint">custom:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="Q3">
+      <fields>
+        <field name="Reference">Q3</field>
+        <field name="Value">AO3401A</field>
+        <field name="Footprint">custom:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R1">
+      <fields>
+        <field name="Reference">R1</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R10">
+      <fields>
+        <field name="Reference">R10</field>
+        <field name="Value">1k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R11">
+      <fields>
+        <field name="Reference">R11</field>
+        <field name="Value">1k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R12">
+      <fields>
+        <field name="Reference">R12</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R13">
+      <fields>
+        <field name="Reference">R13</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R14">
+      <fields>
+        <field name="Reference">R14</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R15">
+      <fields>
+        <field name="Reference">R15</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R16">
+      <fields>
+        <field name="Reference">R16</field>
+        <field name="Value">2.2k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R17">
+      <fields>
+        <field name="Reference">R17</field>
+        <field name="Value">2.2k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R18">
+      <fields>
+        <field name="Reference">R18</field>
+        <field name="Value">1k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R19">
+      <fields>
+        <field name="Reference">R19</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R2">
+      <fields>
+        <field name="Reference">R2</field>
+        <field name="Value">4.7k DNP</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R20">
+      <fields>
+        <field name="Reference">R20</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R21">
+      <fields>
+        <field name="Reference">R21</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R3">
+      <fields>
+        <field name="Reference">R3</field>
+        <field name="Value">4.7k DNP</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R4">
+      <fields>
+        <field name="Reference">R4</field>
+        <field name="Value">6.8k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R5">
+      <fields>
+        <field name="Reference">R5</field>
+        <field name="Value">7.5k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R6">
+      <fields>
+        <field name="Reference">R6</field>
+        <field name="Value">33k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R7">
+      <fields>
+        <field name="Reference">R7</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R8">
+      <fields>
+        <field name="Reference">R8</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="R9">
+      <fields>
+        <field name="Reference">R9</field>
+        <field name="Value">1k</field>
+        <field name="Footprint">custom:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="TP1">
+      <fields>
+        <field name="Reference">TP1</field>
+        <field name="Value">TP_5V</field>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TP_5V" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="TP10">
+      <fields>
+        <field name="Reference">TP10</field>
+        <field name="Value">TP_MQ_ADC</field>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TP_MQ_ADC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="TP11">
+      <fields>
+        <field name="Reference">TP11</field>
+        <field name="Value">TP_MQ_DO</field>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TP_MQ_DO" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="TP2">
+      <fields>
+        <field name="Reference">TP2</field>
+        <field name="Value">TP_3V3</field>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TP_3V3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="TP3">
+      <fields>
+        <field name="Reference">TP3</field>
+        <field name="Value">TP_GND</field>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TP_GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="TP4">
+      <fields>
+        <field name="Reference">TP4</field>
+        <field name="Value">TP_SDA</field>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TP_SDA" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="TP5">
+      <fields>
+        <field name="Reference">TP5</field>
+        <field name="Value">TP_SCL</field>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TP_SCL" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="TP6">
+      <fields>
+        <field name="Reference">TP6</field>
+        <field name="Value">TP_LD_TX</field>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TP_LD_TX" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="TP7">
+      <fields>
+        <field name="Reference">TP7</field>
+        <field name="Value">TP_LD_RX</field>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TP_LD_RX" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="TP8">
+      <fields>
+        <field name="Reference">TP8</field>
+        <field name="Value">TP_LD_OUT</field>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TP_LD_OUT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="TP9">
+      <fields>
+        <field name="Reference">TP9</field>
+        <field name="Value">TP_MQ_AO_RAW</field>
+        <field name="Footprint">custom:TESTPOINT_THT_1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TP_MQ_AO_RAW" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Carrier" part="U1">
+      <fields>
+        <field name="Reference">U1</field>
+        <field name="Value">TMUX1511PWR</field>
+        <field name="Footprint">custom:TSSOP-14_4.4x5mm_P0.65mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SEL1" type="input"/>
+        <pin num="2" name="S1" type="passive"/>
+        <pin num="3" name="D1" type="passive"/>
+        <pin num="4" name="SEL2" type="input"/>
+        <pin num="5" name="S2" type="passive"/>
+        <pin num="6" name="D2" type="passive"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="D3" type="passive"/>
+        <pin num="9" name="S3" type="passive"/>
+        <pin num="10" name="SEL3" type="input"/>
+        <pin num="11" name="D4" type="passive"/>
+        <pin num="12" name="S4" type="passive"/>
+        <pin num="13" name="SEL4" type="input"/>
+        <pin num="14" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Carrier">
+      <uri>C:\Users\xsx20\Documents\Codex\2026-10-02\ni\outputs\hardware/carrier.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3" class="Default">
+      <node ref="C10" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C11" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C2" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="3V3" pintype="power_out"/>
+      <node ref="J1" pin="2" pinfunction="3V3" pintype="passive"/>
+      <node ref="J10" pin="2" pinfunction="3V3" pintype="passive"/>
+      <node ref="J11" pin="2" pinfunction="3V3" pintype="passive"/>
+      <node ref="J2" pin="5" pinfunction="VCC" pintype="power_in"/>
+      <node ref="J3" pin="1" pinfunction="VCC" pintype="power_in"/>
+      <node ref="J7" pin="1" pinfunction="3V3" pintype="passive"/>
+      <node ref="J8" pin="2" pinfunction="3V3" pintype="passive"/>
+      <node ref="J9" pin="2" pinfunction="3V3" pintype="passive"/>
+      <node ref="JP1" pin="3" pinfunction="3V3" pintype="passive"/>
+      <node ref="JP2" pin="3" pinfunction="3V3" pintype="passive"/>
+      <node ref="R1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R16" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R8" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="TP_3V3" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="2" name="5V_SERVO" class="Power,Default">
+      <node ref="C12" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C13" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="J12" pin="2" pinfunction="5V_SERVO" pintype="passive"/>
+      <node ref="Q3" pin="2" pinfunction="S" pintype="passive"/>
+    </net>
+    <net code="3" name="BH_ADDR" class="Default">
+      <node ref="J2" pin="1" pinfunction="ADDR" pintype="input"/>
+      <node ref="JP1" pin="2" pinfunction="ADDR" pintype="passive"/>
+    </net>
+    <net code="4" name="BME_ADDR" class="Default">
+      <node ref="J3" pin="5" pinfunction="SDO" pintype="input"/>
+      <node ref="JP2" pin="2" pinfunction="ADDR" pintype="passive"/>
+    </net>
+    <net code="5" name="BME_CS" class="Default">
+      <node ref="J3" pin="6" pinfunction="CS" pintype="input"/>
+      <node ref="R1" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="6" name="D1_A" class="Default">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R16" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="7" name="D2_A" class="Default">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R17" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="8" name="ESP32_5V" class="Power,Default">
+      <node ref="J1" pin="21" pinfunction="5V" pintype="power_out"/>
+      <node ref="JP3" pin="1" pinfunction="USB" pintype="passive"/>
+    </net>
+    <net code="9" name="EXT_5V" class="Power,Default">
+      <node ref="JP3" pin="3" pinfunction="EXT" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="S" pintype="passive"/>
+    </net>
+    <net code="10" name="EXT_5V_RAW" class="Power,Default">
+      <node ref="J6" pin="1" pinfunction="EXT5V_RAW" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="11" name="GND" class="Default">
+      <node ref="C1" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="C10" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="C11" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="C12" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="C13" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="C3" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C4" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="C5" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="C6" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="C7" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="C8" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="C9" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="22" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="23" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="43" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="44" pinfunction="GND" pintype="passive"/>
+      <node ref="J10" pin="1" pinfunction="GND" pintype="passive"/>
+      <node ref="J11" pin="1" pinfunction="GND" pintype="passive"/>
+      <node ref="J12" pin="1" pinfunction="GND" pintype="passive"/>
+      <node ref="J13" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="GND" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="J4" pin="4" pinfunction="GND" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="J7" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="GND" pintype="passive"/>
+      <node ref="J9" pin="1" pinfunction="GND" pintype="passive"/>
+      <node ref="JP1" pin="1" pinfunction="GND" pintype="passive"/>
+      <node ref="JP2" pin="1" pinfunction="GND" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="Q3" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R12" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R13" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R14" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R15" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R19" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R5" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R7" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="TP_GND" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="12" name="GPIO6" class="Default">
+      <node ref="J1" pin="6" pinfunction="6" pintype="bidirectional"/>
+      <node ref="J8" pin="3" pinfunction="IO6" pintype="passive"/>
+    </net>
+    <net code="13" name="GPIO7" class="Default">
+      <node ref="J1" pin="7" pinfunction="7" pintype="bidirectional"/>
+      <node ref="J9" pin="3" pinfunction="IO7" pintype="passive"/>
+    </net>
+    <net code="14" name="GPIO10" class="Default">
+      <node ref="J1" pin="16" pinfunction="10" pintype="bidirectional"/>
+      <node ref="J10" pin="3" pinfunction="IO10" pintype="passive"/>
+    </net>
+    <net code="15" name="GPIO11" class="Default">
+      <node ref="J1" pin="17" pinfunction="11" pintype="bidirectional"/>
+      <node ref="J11" pin="3" pinfunction="IO11" pintype="passive"/>
+    </net>
+    <net code="16" name="I2C_SCL" class="Default">
+      <node ref="J1" pin="15" pinfunction="9" pintype="bidirectional"/>
+      <node ref="J2" pin="3" pinfunction="SCL" pintype="input"/>
+      <node ref="J3" pin="3" pinfunction="SCL" pintype="input"/>
+      <node ref="J7" pin="4" pinfunction="SCL" pintype="passive"/>
+      <node ref="R3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="TP_SCL" pintype="passive"/>
+    </net>
+    <net code="17" name="I2C_SDA" class="Default">
+      <node ref="J1" pin="12" pinfunction="8" pintype="bidirectional"/>
+      <node ref="J2" pin="2" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="J3" pin="4" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="J7" pin="3" pinfunction="SDA" pintype="passive"/>
+      <node ref="R2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="TP_SDA" pintype="passive"/>
+    </net>
+    <net code="18" name="MQ_ADC" class="Default">
+      <node ref="J1" pin="4" pinfunction="4" pintype="input"/>
+      <node ref="R15" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP10" pin="1" pinfunction="TP_MQ_ADC" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="D4" pintype="passive"/>
+    </net>
+    <net code="19" name="MQ_ADC_FILTER" class="Default">
+      <node ref="C1" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="R4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="S4" pintype="passive"/>
+    </net>
+    <net code="20" name="MQ_AO_RAW" class="Default">
+      <node ref="J5" pin="4" pinfunction="AO" pintype="output"/>
+      <node ref="R4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP9" pin="1" pinfunction="TP_MQ_AO_RAW" pintype="passive"/>
+    </net>
+    <net code="21" name="MQ_BASE" class="Default">
+      <node ref="Q1" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R6" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R7" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="22" name="MQ_DO_3V3" class="Default">
+      <node ref="J1" pin="5" pinfunction="5" pintype="input"/>
+      <node ref="Q1" pin="3" pinfunction="D" pintype="open_collector"/>
+      <node ref="R8" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="TP11" pin="1" pinfunction="TP_MQ_DO" pintype="passive"/>
+    </net>
+    <net code="23" name="MQ_DO_RAW" class="Default">
+      <node ref="J5" pin="3" pinfunction="DO" pintype="open_collector"/>
+      <node ref="R21" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R6" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="24" name="RADAR_OUT" class="Default">
+      <node ref="J4" pin="3" pinfunction="OUT" pintype="output"/>
+      <node ref="R11" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="TP_LD_OUT" pintype="passive"/>
+    </net>
+    <net code="25" name="RADAR_OUT_ESP" class="Default">
+      <node ref="J1" pin="9" pinfunction="16" pintype="input"/>
+      <node ref="R13" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="D3" pintype="passive"/>
+    </net>
+    <net code="26" name="RADAR_OUT_LIMIT" class="Default">
+      <node ref="R11" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="S3" pintype="passive"/>
+    </net>
+    <net code="27" name="RADAR_RX" class="Default">
+      <node ref="J4" pin="2" pinfunction="RX" pintype="input"/>
+      <node ref="R10" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R14" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="TP_LD_RX" pintype="passive"/>
+    </net>
+    <net code="28" name="RADAR_RX_ESP" class="Default">
+      <node ref="J1" pin="11" pinfunction="18" pintype="output"/>
+      <node ref="U1" pin="5" pinfunction="S2" pintype="passive"/>
+    </net>
+    <net code="29" name="RADAR_RX_SWITCH" class="Default">
+      <node ref="R10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="D2" pintype="passive"/>
+    </net>
+    <net code="30" name="RADAR_TX" class="Default">
+      <node ref="J4" pin="1" pinfunction="TX" pintype="output"/>
+      <node ref="R9" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="TP_LD_TX" pintype="passive"/>
+    </net>
+    <net code="31" name="RADAR_TX_ESP" class="Default">
+      <node ref="J1" pin="10" pinfunction="17" pintype="input"/>
+      <node ref="R12" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="D1" pintype="passive"/>
+    </net>
+    <net code="32" name="RADAR_TX_LIMIT" class="Default">
+      <node ref="R9" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="S1" pintype="passive"/>
+    </net>
+    <net code="33" name="SENSOR_5V" class="Power,Default">
+      <node ref="C3" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C4" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C5" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C6" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C7" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C8" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C9" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="J4" pin="5" pinfunction="VCC" pintype="power_in"/>
+      <node ref="J5" pin="1" pinfunction="VCC" pintype="power_in"/>
+      <node ref="JP3" pin="2" pinfunction="SENSOR" pintype="passive"/>
+      <node ref="R17" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R20" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R21" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="TP_5V" pintype="passive"/>
+    </net>
+    <net code="34" name="SENSOR_ENABLE" class="Default">
+      <node ref="R20" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="SEL1" pintype="input"/>
+      <node ref="U1" pin="10" pinfunction="SEL3" pintype="input"/>
+      <node ref="U1" pin="13" pinfunction="SEL4" pintype="input"/>
+      <node ref="U1" pin="4" pinfunction="SEL2" pintype="input"/>
+    </net>
+    <net code="35" name="SERVO_5V_RAW" class="Power,Default">
+      <node ref="J13" pin="1" pinfunction="SERVO5V_RAW" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="36" name="SERVO_PWM" class="Default">
+      <node ref="J1" pin="18" pinfunction="12" pintype="output"/>
+      <node ref="R18" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="37" name="SERVO_SIGNAL" class="Default">
+      <node ref="J12" pin="3" pinfunction="SIGNAL" pintype="passive"/>
+      <node ref="R18" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R19" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="38" name="unconnected-(J1-0-Pad36)" class="Default">
+      <node ref="J1" pin="36" pinfunction="0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(J1-1-Pad26)" class="Default">
+      <node ref="J1" pin="26" pinfunction="1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(J1-2-Pad27)" class="Default">
+      <node ref="J1" pin="27" pinfunction="2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(J1-3-Pad13)" class="Default">
+      <node ref="J1" pin="13" pinfunction="3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(J1-13-Pad19)" class="Default">
+      <node ref="J1" pin="19" pinfunction="13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(J1-14-Pad20)" class="Default">
+      <node ref="J1" pin="20" pinfunction="14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(J1-15-Pad8)" class="Default">
+      <node ref="J1" pin="8" pinfunction="15" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(J1-19-Pad42)" class="Default">
+      <node ref="J1" pin="42" pinfunction="19" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(J1-20-Pad41)" class="Default">
+      <node ref="J1" pin="41" pinfunction="20" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(J1-21-Pad40)" class="Default">
+      <node ref="J1" pin="40" pinfunction="21" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(J1-36-Pad34)" class="Default">
+      <node ref="J1" pin="34" pinfunction="36" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(J1-37-Pad33)" class="Default">
+      <node ref="J1" pin="33" pinfunction="37" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(J1-38-Pad32)" class="Default">
+      <node ref="J1" pin="32" pinfunction="38" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(J1-39-Pad31)" class="Default">
+      <node ref="J1" pin="31" pinfunction="39" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(J1-40-Pad30)" class="Default">
+      <node ref="J1" pin="30" pinfunction="40" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(J1-41-Pad29)" class="Default">
+      <node ref="J1" pin="29" pinfunction="41" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(J1-42-Pad28)" class="Default">
+      <node ref="J1" pin="28" pinfunction="42" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(J1-45-Pad37)" class="Default">
+      <node ref="J1" pin="37" pinfunction="45" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(J1-46-Pad14)" class="Default">
+      <node ref="J1" pin="14" pinfunction="46" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(J1-47-Pad39)" class="Default">
+      <node ref="J1" pin="39" pinfunction="47" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(J1-48-Pad38)" class="Default">
+      <node ref="J1" pin="38" pinfunction="48" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(J1-Pad35)" class="Default">
+      <node ref="J1" pin="35" pinfunction="35" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(J1-RST-Pad3)" class="Default">
+      <node ref="J1" pin="3" pinfunction="RST" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(J1-RX44-Pad25)" class="Default">
+      <node ref="J1" pin="25" pinfunction="RX44" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(J1-TX43-Pad24)" class="Default">
+      <node ref="J1" pin="24" pinfunction="TX43" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

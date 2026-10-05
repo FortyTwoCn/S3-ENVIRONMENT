@@ -1,0 +1,27 @@
+[program:sensor-websocket]
+command=/usr/bin/php /opt/sensor_monitor/server/bin/websocket.php
+directory=/opt/sensor_monitor/server
+user=www-data
+autostart=true
+autorestart=true
+startsecs=3
+redirect_stderr=true
+stdout_logfile=/var/log/sensor-websocket.log
+stdout_logfile_maxbytes=10MB
+stdout_logfile_backups=3
+stopasgroup=true
+killasgroup=true
+
+[program:sensor-worker]
+command=/usr/bin/php /opt/sensor_monitor/server/bin/worker.php
+directory=/opt/sensor_monitor/server
+user=www-data
+autostart=true
+autorestart=true
+startsecs=3
+redirect_stderr=true
+stdout_logfile=/var/log/sensor-worker.log
+stdout_logfile_maxbytes=10MB
+stdout_logfile_backups=3
+stopasgroup=true
+killasgroup=true

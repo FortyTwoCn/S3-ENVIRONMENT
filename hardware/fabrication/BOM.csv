@@ -1,0 +1,41 @@
+﻿References,Value / Part,Quantity,Footprint,Population,Notes
+J1,1x22 Female Header,2,ESP32-S3_N16R8_44PIN_CARRIER,FIT,2.54mm pitch; straight through-hole; >=8.5mm body height; 25.40mm row spacing
+J2,1x5 Female Header,1,GY-302_BH1750_SOCKET,FIT,GY-302; 2.54mm pitch; >=8.5mm height
+J3,1x6 Female Header,1,BME688_SOCKET,FIT,BME688; 2.54mm pitch; >=8.5mm height
+J4,1x5 Female Header,1,LD2410C_SOCKET,FIT,LD2410C; 2.54mm pitch; >=8.5mm height
+J5,1x4 Female Header,1,MQ_GAS_SOCKET,FIT,MQ; 2.54mm pitch; >=8.5mm height
+JP1,3-pad copper solder selector,0,SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm,PCB FEATURE,Factory copper bridge 1-2=GND; cut before soldering 2-3=3V3
+JP2,3-pad copper solder selector,0,SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm,PCB FEATURE,Factory copper bridge 1-2=GND; cut before soldering 2-3=3V3
+"R1, R8, R21, R20",10k,4,R_1206_3216Metric,FIT,"1206, 1%, 0.25 W"
+"R2, R3",4.7k DNP,2,R_1206_3216Metric,DNP,"1206, 1%, 0.25 W"
+R4,6.8k,1,R_1206_3216Metric,FIT,"1206, 1%, 0.25 W"
+R5,7.5k,1,R_1206_3216Metric,FIT,"1206, 1%, 0.25 W"
+"C1, C2, C5, C7, C9, C11, C13",100nF,7,C_1206_3216Metric,FIT,1206 X7R; 10uF >=16V; 100nF >=25V
+R6,33k,1,R_1206_3216Metric,FIT,"1206, 1%, 0.25 W"
+"R7, R12, R13, R14, R15, R19",100k,6,R_1206_3216Metric,FIT,"1206, 1%, 0.25 W"
+Q1,AO3400A,1,SOT-23,FIT,N-MOS inverter; 1=G 2=S 3=D; insulated gate prevents 5V signal back-power when 3V3 is off
+U1,TMUX1511PWR,1,TSSOP-14_4.4x5mm_P0.65mm,FIT,"Four powered-off protected SPST switches; SEL tied to SENSOR_5V, fail-safe 5.5V controls"
+"R9, R10, R11, R18",1k,4,R_1206_3216Metric,FIT,"1206, 1%, 0.25 W"
+"J6, J13",2-pin 5.08mm screw terminal,2,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",FIT,5V ONLY; pin1 positive pin2 GND; input wire clearance required
+Q2,AO3401A,1,SOT-23,FIT,"P-MOS reverse polarity protection, source on protected output; body diode raw -> protected"
+JP3,1x3 Male Header,1,POWER_SELECT_1x03,FIT,2.54mm pitch; selector; one rated >=3A shunt only
+C3,100uF 16V,1,CP_Radial_D6.3mm_P2.50mm,FIT,"Low ESR polarized electrolytic, 6.3mm diameter, 2.5mm pitch"
+"C4, C6, C8, C10, C12",10uF,5,C_1206_3216Metric,FIT,1206 X7R; 10uF >=16V; 100nF >=25V
+"R16, R17",2.2k,2,R_1206_3216Metric,FIT,"1206, 1%, 0.25 W"
+D1,GREEN,1,LED_1206_3216Metric,FIT,
+D2,AMBER,1,LED_1206_3216Metric,FIT,
+J7,1x4 Male Header,1,EXT_I2C_1x04,FIT,2.54mm pitch; EXT_I2C 3V3/GND/SDA/SCL
+J8,1x3 Male Header,1,GPIO_1x03,FIT,GPIO6; 2.54mm pitch; see interface pinout
+J9,1x3 Male Header,1,GPIO_1x03,FIT,GPIO7; 2.54mm pitch; see interface pinout
+J10,1x3 Male Header,1,GPIO_1x03,FIT,GPIO10; 2.54mm pitch; see interface pinout
+J11,1x3 Male Header,1,GPIO_1x03,FIT,GPIO11; 2.54mm pitch; see interface pinout
+J12,1x3 Male Header,1,SERVO_1x03,FIT,SERVO; 2.54mm pitch; see interface pinout
+Q3,AO3401A,1,SOT-23,FIT,Independent servo rail reverse polarity protection
+JP3-SHUNT,2.54mm jumper cap,1,Accessory,FIT,>=3A rated; default 2-3 EXT; never bridge all three pins
+TP1-TP11,Plated test pads,0,1.5mm pad / 0.7mm drill,PCB FEATURE,Optional test hooks or solder pins; no fitted part required
+H1-H4,M3 mounting hardware,4,3.2mm NPTH,OPTIONAL,Nylon standoffs recommended; no metal above antenna regions
+MODULE-ESP,ESP32-S3 N16R8 44-pin board,1,USER PROVIDED MODULE,USER INSTALLED,Dual Type-C CH343P board matching supplied photo; do not place in PCB SMT order
+MODULE-GY,GY-302 / BH1750 module,1,USER PROVIDED MODULE,USER INSTALLED,Sensing face up: ADDR/SDA/SCL/GND/VCC from carrier pin1; verify straight downward header
+MODULE-BME,BME688 I2C module,1,USER PROVIDED MODULE,USER INSTALLED,VCC/GND/SCL/SDA/SDO/CS must match actual module
+MODULE-LD,HLK-LD2410C module,1,USER PROVIDED MODULE,USER INSTALLED,TX/RX/OUT/GND/VCC; 3.3V logic
+MODULE-MQ,MQ gas module,1,USER PROVIDED MODULE,USER INSTALLED,Sensing face up: VCC/GND/DO/AO from carrier pin1; 5V heater; right-angle header needs replacement for horizontal mounting

@@ -1,0 +1,16 @@
+{
+  "release": "1.0.1",
+  "status": "FIRMWARE_CONNECTED_SENSORS_PENDING",
+  "date": "2026-10-05T02:09:29Z",
+  "integration_checks": 36,
+  "browser_checks": 11,
+  "tls_checks": 4,
+  "firmware_environments": 2,
+  "security_advisories": 0,
+  "container_configuration": "Compose and Caddy parsed/validated; no Docker daemon run",
+  "public_site_deployed": true,
+  "physical_esp32_tested": true,
+  "physical_sensors_verified": false,
+  "physical_websocket_authenticated": true,
+  "local_software_tests_note": "Historical suite results retained; firmware 1.0.1 compiled for both variants and physically verified separately."
+}

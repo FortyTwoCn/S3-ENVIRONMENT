@@ -1,0 +1,85 @@
+{
+  "status": "PARSE_AND_ANTENNA_COPPER_KEEPOUT_PASS_MECHANICAL_PENDING",
+  "parser": "Gerbonara 1.6.3",
+  "layers": [
+    "bottom/copper",
+    "bottom/mask",
+    "bottom/silk",
+    "mechanical/outline",
+    "top/copper",
+    "top/mask",
+    "top/silk"
+  ],
+  "PTH_drill_hits": 143,
+  "NPTH_drill_hits": 4,
+  "NPTH_holes_mm": [
+    {
+      "x": 4.0,
+      "y": -4.0,
+      "diameter": 3.2
+    },
+    {
+      "x": 4.0,
+      "y": -86.0,
+      "diameter": 3.2
+    },
+    {
+      "x": 106.0,
+      "y": -4.0,
+      "diameter": 3.2
+    },
+    {
+      "x": 106.0,
+      "y": -86.0,
+      "diameter": 3.2
+    }
+  ],
+  "antenna_copper_raster_checks": [
+    {
+      "layer": "top",
+      "keepout": "ESP32",
+      "dark_pixels": 0,
+      "checked_pixels": 34463,
+      "status": "PASS"
+    },
+    {
+      "layer": "top",
+      "keepout": "RADAR",
+      "dark_pixels": 0,
+      "checked_pixels": 44944,
+      "status": "PASS"
+    },
+    {
+      "layer": "bottom",
+      "keepout": "ESP32",
+      "dark_pixels": 0,
+      "checked_pixels": 34463,
+      "status": "PASS"
+    },
+    {
+      "layer": "bottom",
+      "keepout": "RADAR",
+      "dark_pixels": 0,
+      "checked_pixels": 44944,
+      "status": "PASS"
+    }
+  ],
+  "parser_notes": [
+    "C:\\Users\\xsx20\\Documents\\Codex\\2026-10-02\\ni\\outputs\\hardware\\gerber\\PROVISIONAL_MECHANICAL_DIMENSION_PENDING\\esp32_sensor_carrier-NPTH.drl:12 \"G90\": G90 header statement found after end of header",
+    "C:\\Users\\xsx20\\Documents\\Codex\\2026-10-02\\ni\\outputs\\hardware\\gerber\\PROVISIONAL_MECHANICAL_DIMENSION_PENDING\\esp32_sensor_carrier-PTH.drl:22 \"G90\": G90 header statement found after end of header"
+  ],
+  "files": {
+    "esp32_sensor_carrier-B_Cu.gbl": "a4bac7ba526fcaa9223dff6214bbd0dbb776a4d2a550c86d8cb1b1562729a2a7",
+    "esp32_sensor_carrier-B_Mask.gbs": "80d39e3aa762e6cc945b33dfc3e4506d75c62c17eb0a798d93d1feff0b4d5b29",
+    "esp32_sensor_carrier-B_Silkscreen.gbo": "3fa80c1fd5e1449ba50defd0299a22697cee51fcbb419942e6452ff1e9778f85",
+    "esp32_sensor_carrier-Edge_Cuts.gm1": "6638cd8dc689ed3e410c3931793b92b9e837283615ca88d2d07da3f7e252ab85",
+    "esp32_sensor_carrier-F_Cu.gtl": "ce45d72a11b62fce2d1d2103dfca17e9948ecf564874c3c19892d8868a46a53c",
+    "esp32_sensor_carrier-F_Mask.gts": "8d39ca7b7545731ddc1c7d1c1e5b81abb6bd07a11eb3da7cfa83126444a548f2",
+    "esp32_sensor_carrier-F_Silkscreen.gto": "6e3a7579744e535395359baeeba9463bf8f3e10b3ac102801eb2aba030b077f0",
+    "esp32_sensor_carrier-job.gbrjob": "f7463e0da76c4ab2feb3e46f6e258531d3bd98209b8df291a0b81e778634b875",
+    "esp32_sensor_carrier-NPTH-drl_map.svg": "63f302f7f74f5c5ab1319e87f32731ba5b9f977d43c30a90010fd41eb88c800a",
+    "esp32_sensor_carrier-NPTH.drl": "bdf753d5c3af49e001df29c8d94504bb6e3dedd36a49f64df223b1acd3cc1454",
+    "esp32_sensor_carrier-PTH-drl_map.svg": "a86ccff4f6cb2d4cfe109ae475f6f2e62821980468e34ee6558f9be8c41cbbcd",
+    "esp32_sensor_carrier-PTH.drl": "f52a8150a82c74b9e06a362c1e1f1ee723464bf140a088012d0f24640e77c921"
+  }
+}

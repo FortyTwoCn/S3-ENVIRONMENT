@@ -1,0 +1,7 @@
+#VRML V2.0 utf8
+# APPROXIMATE USER MODULE ENVELOPE, NOT A VERIFIED PART MODEL
+Transform { translation 0.0 -10.5 3.661417 children [ Shape { appearance Appearance { material Material { diffuseColor 0.02 0.16 0.1 } } geometry Box { size 11.0 22.5 0.629921 } } ] }
+Transform { translation 0.0 -3.346457 4.606299 children [ Shape { appearance Appearance { material Material { diffuseColor 0.62 0.62 0.62 } } geometry Box { size 6.692913 7.480315 1.259843 } } ] }
+Transform { translation 0.0 1.977953 3.661417 children [ Shape { appearance Appearance { material Material { diffuseColor 0.035 0.035 0.035 } } geometry Box { size 7.086614 2.4563 0.629921 } } ] }
+Transform { translation -2.283465 -21.456693 4.370079 children [ Shape { appearance Appearance { material Material { diffuseColor 0.65 0.65 0.65 } } geometry Box { size 3.346457 2.559055 1.417323 } } ] }
+Transform { translation 2.283465 -21.456693 4.370079 children [ Shape { appearance Appearance { material Material { diffuseColor 0.65 0.65 0.65 } } geometry Box { size 3.346457 2.559055 1.417323 } } ] }

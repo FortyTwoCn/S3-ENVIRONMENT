@@ -1,0 +1,8 @@
+{
+  "app_url": "https://s.xuanknow.cn",
+  "ws_public_url": "wss://s.xuanknow.cn/ws",
+  "cookie_secure": "1",
+  "protected_configuration_preserved": true,
+  "supervisor": "sensor-monitor-websocket         RUNNING   pid 3051681, uptime 0:00:06\nsensor-monitor-worker            RUNNING   pid 3051687, uptime 0:00:03\n",
+  "ssl_managed_by": "BaoTa"
+}

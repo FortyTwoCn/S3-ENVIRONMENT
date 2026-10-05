@@ -1,0 +1,12 @@
+110.00 x 90.00 mm carrier bounding box
+2 layers, FR4 1.6 mm, 1 oz copper (35 um each side), green mask suggested
+USB cutout: x=39.50..70.50 mm, y=64.50..90.00 mm
+BME isolation slot: x=84.50..104.50 mm, y=27.50..28.50 mm, radius 0.50 mm ends
+4 x 3.20 mm NPTH at (4,4), (106,4), (4,86), (106,86) mm
+Signal 0.30 mm; power main/MQ 1.00 mm; Q2 source escape 0.601 mm for <2 mm only
+Signal vias 0.80/0.40 mm; power vias 1.20/0.60 mm
+Clearance >=0.20 mm; power class 0.25 mm; copper-to-edge >=0.30 mm
+ESP32: row 25.40 mm, pitch 2.54 mm, 2x22, span 53.34 mm
+ESP body 27.94 x 57.15 mm; total antenna length 63.389002 mm
+Top and USB pad-to-body offsets provisionally 1.905 mm EACH, NOT VERIFIED
+MECHANICAL_DIMENSION_PENDING / MECHANICAL VERIFICATION REQUIRED

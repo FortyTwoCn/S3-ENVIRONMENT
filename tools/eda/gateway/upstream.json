@@ -1,0 +1,35 @@
+{
+  "source": "https://github.com/easyeda/easyeda-api-skill",
+  "commit": "b9bf568239b235592bb0c12c6ac233502b9801c1",
+  "skill_version": "1.1.43",
+  "bridge_modified": false,
+  "bridge_sha256": "88e26994849aff354cc894e301730c11c5a54ef11c25ab122042ae932c598efb",
+  "dependency": {
+    "name": "ws",
+    "version": "8.21.3",
+    "resolved": "https://registry.npmjs.org/ws/-/ws-8.21.3.tgz",
+    "integrity": "sha512-201TZ/kPWxoPr/OKWjquZR1SWKXcvxdH+e1xrx89b3YbmzLMFCLfnaG1HFIgWzJOEWZ7MvpK++odZufgYR50Rw==",
+    "license": "MIT",
+    "engines": {
+      "node": ">=10.0.0"
+    },
+    "peerDependencies": {
+      "bufferutil": "^4.0.1",
+      "utf-8-validate": ">=5.0.2"
+    },
+    "peerDependenciesMeta": {
+      "bufferutil": {
+        "optional": true
+      },
+      "utf-8-validate": {
+        "optional": true
+      }
+    },
+    "integrity_verified": true
+  },
+  "runtime_dependencies_installed": [
+    "ws"
+  ],
+  "postinstall_scripts_executed": false,
+  "listen_host": "127.0.0.1"
+}

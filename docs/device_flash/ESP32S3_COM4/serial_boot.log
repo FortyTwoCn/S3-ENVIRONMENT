@@ -1,0 +1,30 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3808,len:0x4bc
+load:0x403c9700,len:0xbd8
+load:0x403cc700,len:0x2a0c
+entry 0x403c98d0
+
+ESP32-S3 Sensor Carrier Network Firmware
+Firmware carrier-network-1.0.1 | flash=16777216 PSRAM=8386279
+MQ DO is inverted: typical alarm = GPIO5 HIGH. Serial commands: CONFIG, STATUS, WIFI_SCAN. Hold BOOT 5s after boot to configure.
+[  1032][E][Preferences.cpp:483] getString(): nvs_get_str len fail: ca NOT_FOUND
+Policy: interval=300s MQ=0 warmup=180s
+[BH1750] ERROR: received NACK on transmit of address
+[BH1750] ERROR: received NACK on transmit of address
+BH1750=missing BME688=missing LD UART=256000 8N1
+Network: SSID=<CONFIGURED_WIFI> status=6 reason=0 password_bytes=9 token_configured=1 TLS=1 host=s.xuanknow.cn port=443
+Wi-Fi connection attempt
+Wi-Fi disconnected: reason=2
+Network: SSID=<CONFIGURED_WIFI> status=0 reason=2 password_bytes=9 token_configured=1 TLS=1 host=s.xuanknow.cn port=443
+Network: SSID=<CONFIGURED_WIFI> status=3 reason=2 password_bytes=9 token_configured=1 TLS=1 host=s.xuanknow.cn port=443
+Wi-Fi IP=192.168.43.187 gateway=192.168.43.1 DNS=192.168.43.1 RSSI=-19 channel=1 time_valid=0 WS_authenticated=0
+Waiting for NTP time before verified TLS connection
+Sample 0 boot: lux=nan T=nan RH=nan MQ=0mV smoke=0 ready=0 queue=1
+WS connected; authenticating
+Policy: interval=300s MQ=0 warmup=180s
+WS authenticated
+Telemetry acknowledged: seq=0

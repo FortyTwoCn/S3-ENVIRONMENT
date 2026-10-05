@@ -1,0 +1,85 @@
+{
+  "time_utc": "2026-10-04T12:41:19.465576+00:00",
+  "checks": [
+    {
+      "name": "Public Nginx login page",
+      "pass": true
+    },
+    {
+      "name": "Unauthenticated API rejected",
+      "pass": true
+    },
+    {
+      "name": "Environment file inaccessible",
+      "pass": true
+    },
+    {
+      "name": "Password login over encrypted SSH tunnel",
+      "pass": true
+    },
+    {
+      "name": "Configured WebSocket URL",
+      "pass": true
+    },
+    {
+      "name": "Remember login from fresh session",
+      "pass": true
+    },
+    {
+      "name": "60-day retention and mail defaults",
+      "pass": true
+    },
+    {
+      "name": "Browser WebSocket authentication",
+      "pass": true
+    },
+    {
+      "name": "Device WebSocket auth and 300-second config",
+      "pass": true
+    },
+    {
+      "name": "Telemetry persisted and acknowledged",
+      "pass": true
+    },
+    {
+      "name": "Live browser receives telemetry",
+      "pass": true
+    },
+    {
+      "name": "Retransmission deduplicated",
+      "pass": true
+    },
+    {
+      "name": "Sample-now command reaches device",
+      "pass": true
+    },
+    {
+      "name": "Sample-now completes with fresh data",
+      "pass": true
+    },
+    {
+      "name": "History and chart read PostgreSQL",
+      "pass": true
+    },
+    {
+      "name": "CSV export",
+      "pass": true
+    },
+    {
+      "name": "Device reconnects and authenticates",
+      "pass": true
+    },
+    {
+      "name": "Real device prepared with MQ disabled",
+      "pass": true
+    }
+  ],
+  "pass_count": 18,
+  "simulated_device_ids": [
+    "1bd52bed-a28b-4993-abc5-346dfe5ddaba",
+    "01102165-3087-4802-a382-6b87a2a1612e"
+  ],
+  "ssl_configured": false,
+  "credentials_transport": "SSH tunnel",
+  "actual_hardware_tested": false
+}

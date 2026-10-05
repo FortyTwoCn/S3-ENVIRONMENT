@@ -1,0 +1,425 @@
+{
+  "status": "ELECTRICAL_AND_ROUTING_PASS_MECHANICAL_PENDING",
+  "checks": [
+    {
+      "check": "manifest_netlist_pcb_pad_parity",
+      "status": "PASS",
+      "detail": "177 assigned pins checked against KiCad XML and physical PCB pads"
+    },
+    {
+      "check": "J2_pinout",
+      "status": "PASS",
+      "detail": [
+        "BH_ADDR",
+        "I2C_SDA",
+        "I2C_SCL",
+        "GND",
+        "+3V3"
+      ]
+    },
+    {
+      "check": "J3_pinout",
+      "status": "PASS",
+      "detail": [
+        "+3V3",
+        "GND",
+        "I2C_SCL",
+        "I2C_SDA",
+        "BME_ADDR",
+        "BME_CS"
+      ]
+    },
+    {
+      "check": "J4_pinout",
+      "status": "PASS",
+      "detail": [
+        "RADAR_TX",
+        "RADAR_RX",
+        "RADAR_OUT",
+        "GND",
+        "SENSOR_5V"
+      ]
+    },
+    {
+      "check": "J5_pinout",
+      "status": "PASS",
+      "detail": [
+        "SENSOR_5V",
+        "GND",
+        "MQ_DO_RAW",
+        "MQ_AO_RAW"
+      ]
+    },
+    {
+      "check": "JP3_pinout",
+      "status": "PASS",
+      "detail": [
+        "ESP32_5V",
+        "SENSOR_5V",
+        "EXT_5V"
+      ]
+    },
+    {
+      "check": "Q1_pinout",
+      "status": "PASS",
+      "detail": [
+        "MQ_BASE",
+        "GND",
+        "MQ_DO_3V3"
+      ]
+    },
+    {
+      "check": "Q2_pinout",
+      "status": "PASS",
+      "detail": [
+        "GND",
+        "EXT_5V",
+        "EXT_5V_RAW"
+      ]
+    },
+    {
+      "check": "Q3_pinout",
+      "status": "PASS",
+      "detail": [
+        "GND",
+        "5V_SERVO",
+        "SERVO_5V_RAW"
+      ]
+    },
+    {
+      "check": "U1_pinout",
+      "status": "PASS",
+      "detail": [
+        "SENSOR_ENABLE",
+        "RADAR_TX_LIMIT",
+        "RADAR_TX_ESP",
+        "SENSOR_ENABLE",
+        "RADAR_RX_ESP",
+        "RADAR_RX_SWITCH",
+        "GND",
+        "RADAR_OUT_ESP",
+        "RADAR_OUT_LIMIT",
+        "SENSOR_ENABLE",
+        "MQ_ADC",
+        "MQ_ADC_FILTER",
+        "SENSOR_ENABLE",
+        "+3V3"
+      ]
+    },
+    {
+      "check": "R4_pinout",
+      "status": "PASS",
+      "detail": [
+        "MQ_AO_RAW",
+        "MQ_ADC_FILTER"
+      ]
+    },
+    {
+      "check": "R5_pinout",
+      "status": "PASS",
+      "detail": [
+        "MQ_ADC_FILTER",
+        "GND"
+      ]
+    },
+    {
+      "check": "C1_pinout",
+      "status": "PASS",
+      "detail": [
+        "MQ_ADC_FILTER",
+        "GND"
+      ]
+    },
+    {
+      "check": "R9_pinout",
+      "status": "PASS",
+      "detail": [
+        "RADAR_TX",
+        "RADAR_TX_LIMIT"
+      ]
+    },
+    {
+      "check": "R10_pinout",
+      "status": "PASS",
+      "detail": [
+        "RADAR_RX_SWITCH",
+        "RADAR_RX"
+      ]
+    },
+    {
+      "check": "R11_pinout",
+      "status": "PASS",
+      "detail": [
+        "RADAR_OUT",
+        "RADAR_OUT_LIMIT"
+      ]
+    },
+    {
+      "check": "R8_pinout",
+      "status": "PASS",
+      "detail": [
+        "+3V3",
+        "MQ_DO_3V3"
+      ]
+    },
+    {
+      "check": "R15_pinout",
+      "status": "PASS",
+      "detail": [
+        "MQ_ADC",
+        "GND"
+      ]
+    },
+    {
+      "check": "GPIO_photo_pin_order",
+      "status": "PASS",
+      "detail": {
+        "4": "MQ_ADC",
+        "5": "MQ_DO_3V3",
+        "8": "I2C_SDA",
+        "9": "I2C_SCL",
+        "16": "RADAR_OUT_ESP",
+        "17": "RADAR_TX_ESP",
+        "18": "RADAR_RX_ESP",
+        "6": "GPIO6",
+        "7": "GPIO7",
+        "10": "GPIO10",
+        "11": "GPIO11",
+        "12": "SERVO_PWM"
+      }
+    },
+    {
+      "check": "reserved_pins_NC",
+      "status": "PASS",
+      "detail": "USB, PSRAM, strapping, RGB pins unused by carrier"
+    },
+    {
+      "check": "no_5V_net_on_GPIO",
+      "status": "PASS",
+      "detail": "GPIO inputs have defined low-voltage networks"
+    },
+    {
+      "check": "selector_ESP32",
+      "status": "PASS",
+      "detail": "No copper bridge between three independently named rails; one removable shunt selected by user"
+    },
+    {
+      "check": "selector_SENSOR",
+      "status": "PASS",
+      "detail": "No copper bridge between three independently named rails; one removable shunt selected by user"
+    },
+    {
+      "check": "selector_EXT",
+      "status": "PASS",
+      "detail": "No copper bridge between three independently named rails; one removable shunt selected by user"
+    },
+    {
+      "check": "J12_pinout",
+      "status": "PASS",
+      "detail": [
+        "GND",
+        "5V_SERVO",
+        "SERVO_SIGNAL"
+      ]
+    },
+    {
+      "check": "J13_pinout",
+      "status": "PASS",
+      "detail": [
+        "SERVO_5V_RAW",
+        "GND"
+      ]
+    },
+    {
+      "check": "MQ_ADC_max_5V25_1pct",
+      "status": "PASS",
+      "detail": {
+        "nominal_ratio": 0.5064145847400405,
+        "at_5V": 2.532072923700203,
+        "maximum_V": 2.684918882790189,
+        "limits": "regulated 5V +/-5%; all resistors 1%; includes R15 loading; U1 Ron <=4.5 ohm only reduces this bound"
+      }
+    },
+    {
+      "check": "MQ_DO_open_collector_gate",
+      "status": "PASS",
+      "detail": {
+        "minimum_high_V": 3.301621849329495,
+        "note": "includes fitted R21 10k, R6 33k, R7 100k; AO3400A specified at Vgs=2.5V"
+      }
+    },
+    {
+      "check": "powered_off_leak_bound",
+      "status": "PASS",
+      "detail": {
+        "GPIO_off_max_V": 0.20199999999999999,
+        "condition": "TMUX1511 max powered-off leakage 2uA/channel; 100k 1% pulldown; protected inputs <=3.6V"
+      }
+    },
+    {
+      "check": "envelope_ESP32_GY302",
+      "status": "PASS",
+      "detail": {
+        "separation_mm": 12.03,
+        "status": "provisional module envelopes; actual headers/body offsets require physical verification"
+      }
+    },
+    {
+      "check": "envelope_ESP32_BME688",
+      "status": "PASS",
+      "detail": {
+        "separation_mm": 13.03,
+        "status": "provisional module envelopes; actual headers/body offsets require physical verification"
+      }
+    },
+    {
+      "check": "envelope_ESP32_LD2410C",
+      "status": "PASS",
+      "detail": {
+        "separation_mm": 15.43,
+        "status": "provisional module envelopes; actual headers/body offsets require physical verification"
+      }
+    },
+    {
+      "check": "envelope_ESP32_MQ",
+      "status": "PASS",
+      "detail": {
+        "separation_mm": 11.03,
+        "status": "provisional module envelopes; actual headers/body offsets require physical verification"
+      }
+    },
+    {
+      "check": "envelope_GY302_BME688",
+      "status": "PASS",
+      "detail": {
+        "separation_mm": 53.0,
+        "status": "provisional module envelopes; actual headers/body offsets require physical verification"
+      }
+    },
+    {
+      "check": "envelope_GY302_LD2410C",
+      "status": "PASS",
+      "detail": {
+        "separation_mm": 22.6,
+        "status": "provisional module envelopes; actual headers/body offsets require physical verification"
+      }
+    },
+    {
+      "check": "envelope_GY302_MQ",
+      "status": "PASS",
+      "detail": {
+        "separation_mm": 52.09,
+        "status": "provisional module envelopes; actual headers/body offsets require physical verification"
+      }
+    },
+    {
+      "check": "envelope_BME688_LD2410C",
+      "status": "PASS",
+      "detail": {
+        "separation_mm": 60.76,
+        "status": "provisional module envelopes; actual headers/body offsets require physical verification"
+      }
+    },
+    {
+      "check": "envelope_BME688_MQ",
+      "status": "PASS",
+      "detail": {
+        "separation_mm": 10.6,
+        "status": "provisional module envelopes; actual headers/body offsets require physical verification"
+      }
+    },
+    {
+      "check": "envelope_LD2410C_MQ",
+      "status": "PASS",
+      "detail": {
+        "separation_mm": 54.4,
+        "status": "provisional module envelopes; actual headers/body offsets require physical verification"
+      }
+    },
+    {
+      "check": "ESP32_trace_via_pad_keepout",
+      "status": "PASS",
+      "detail": {
+        "bounds_mm": [
+          44,
+          0,
+          66,
+          13.4
+        ],
+        "hits": [],
+        "copper_fill": "KiCad keepout rule plus zero DRC; Gerber viewer visual check separately"
+      }
+    },
+    {
+      "check": "RADAR_trace_via_pad_keepout",
+      "status": "PASS",
+      "detail": {
+        "bounds_mm": [
+          0,
+          47.5,
+          19.5,
+          67
+        ],
+        "hits": [],
+        "copper_fill": "KiCad keepout rule plus zero DRC; Gerber viewer visual check separately"
+      }
+    },
+    {
+      "check": "signal_track_width",
+      "status": "PASS",
+      "detail": {
+        "min_width_mm": 0.3
+      }
+    },
+    {
+      "check": "power_track_width",
+      "status": "PASS",
+      "detail": {
+        "minimum_width_mm": {
+          "SENSOR_5V": 1.0,
+          "ESP32_5V": 1.0,
+          "EXT_5V": 0.601,
+          "EXT_5V_RAW": 1.0,
+          "5V_SERVO": 1.0,
+          "SERVO_5V_RAW": 1.0
+        },
+        "Q2_short_pad_escape_length_mm": 1.755,
+        "note": "0.601 mm escape only at SOT-23 source pad; 1.0 mm main rails and MQ branch"
+      }
+    },
+    {
+      "check": "four_M3_NPTH",
+      "status": "PASS",
+      "detail": "4 x 3.2 mm NPTH at (4,4), (106,4), (4,86), (106,86); drill file separately checked"
+    },
+    {
+      "check": "DRC_all_rules_active",
+      "status": "PASS",
+      "detail": "All listed DRC rules use error/warning; no disabled categories or exclusions"
+    },
+    {
+      "check": "DRC_no_exclusions",
+      "status": "PASS",
+      "detail": {
+        "violations": 0,
+        "unconnected": 0,
+        "parity": 0
+      }
+    },
+    {
+      "check": "ERC",
+      "status": "PASS",
+      "detail": "No error/warning exclusions used; NC and power flags explicit"
+    },
+    {
+      "check": "actual_module_mechanics",
+      "status": "PENDING",
+      "detail": "Header spacing/pitch and ESP external size from supplied dimensioned photo. ESP end offsets, module pin orientations/body envelopes/USB plugs require physical check. Not production verified."
+    }
+  ],
+  "calculated_MQ_ADC_ratio": 0.5064145847400405,
+  "calculated_MQ_ADC_max_V": 2.684918882790189,
+  "track_count": 788,
+  "via_count": 40,
+  "hardware_tested": false
+}
