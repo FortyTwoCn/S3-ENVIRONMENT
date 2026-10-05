@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "firmware": "carrier-network-1.1.0",
+  "frontend_regression_cases": 16,
+  "telemetry_contract_checks": 25,
+  "previous_mq_regression_cases": 5,
+  "previous_mq_contract_checks": 9,
+  "calibration_status_uploaded": false,
+  "web_measurements_added": 8,
+  "physical_bsec_estimates_verified": true,
+  "available_air_measurements": [
+    "eco2_ppm",
+    "bvoc_ppm",
+    "iaq",
+    "static_iaq",
+    "gas_percentage",
+    "compensated_gas"
+  ]
+}

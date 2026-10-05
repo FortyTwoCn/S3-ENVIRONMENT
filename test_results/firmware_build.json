@@ -1,6 +1,7 @@
 {
   "status": "PASS",
-  "firmware": "carrier-network-1.0.2",
+  "firmware": "carrier-network-1.1.0",
+  "timestamp_utc": "2026-10-05T14:32:43.011381+00:00",
   "environments": [
     {
       "environment": "yd_uart",
@@ -19,12 +20,12 @@
           "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0"
         },
         "firmware.bin": {
-          "bytes": 989264,
-          "sha256": "b144e28f63f293ba465f8cb8c852b2c29053988019dedb45d4306bc6cd2ca046"
+          "bytes": 1024896,
+          "sha256": "ffae2e249b48ac470fbaf6fb56234f8507f6fe3a0b4c37f0a09fea364095ab67"
         },
         "merged_flash.bin": {
-          "bytes": 1054800,
-          "sha256": "287edbd8e8e3ae4cddc615e9d8eadc6a2dd3542656b7236dd0e61ecc9b7bb21d"
+          "bytes": 1090432,
+          "sha256": "96f98752963b644ee4441434c34d7846a21c6388f24ba8028c9a021c4998a133"
         },
         "partitions.bin": {
           "bytes": 3072,
@@ -49,12 +50,12 @@
           "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0"
         },
         "firmware.bin": {
-          "bytes": 993952,
-          "sha256": "22e82ea26a61d0da796d6b2f4fe0acecc3a378d6753590e0b327f0254040b3ab"
+          "bytes": 1039632,
+          "sha256": "3158f3397308f97b02a56f3d739bc4e59667d1e082937a71f435eb1523d1bb6b"
         },
         "merged_flash.bin": {
-          "bytes": 1059488,
-          "sha256": "828607c110d327ce012f9c01abdbc2eb11288109ba928434c95fe8ab7a564573"
+          "bytes": 1105168,
+          "sha256": "9476b52b4ee3ff015b1b55e53f529294392bd8b751d29bbf41316776854d7fd5"
         },
         "partitions.bin": {
           "bytes": 3072,
@@ -64,6 +65,12 @@
     }
   ],
   "framework": "Arduino ESP32 2.0.17 / PlatformIO espressif32 6.12.0",
-  "source_sha256": "9587561569a31e269afe9a2e02f4ba84c5ea91b937488a2a34324135e43cf5e6",
-  "physical_flash_test": "see physical_bringup_1.0.2.json; sensor measurements pending"
+  "bsec_version": "2.6.1.0",
+  "source_sha256": "a460d80bd893f5e44f327b87623f5ec6a3fec32f406d99e72c7396e97a226518",
+  "sources": {
+    "air_quality.cpp": "0c8d9cd36dca49cbaa5dcc13481077c35ee1c12dae0ae9cba8a7e98686d2f8a9",
+    "air_quality.h": "f37e8f045dab8bb33cb87dc8cbf9093ff1fb49e1a2384b7a9cde228d4be69ea3",
+    "main.cpp": "a460d80bd893f5e44f327b87623f5ec6a3fec32f406d99e72c7396e97a226518"
+  },
+  "physical_flash_test": "see physical_bsec_1.1.0.json"
 }

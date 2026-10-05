@@ -65,7 +65,7 @@ try {
     if (in_array($action,['history','chart','export'],true)) {
         $d=device((string)($_GET['device_id']??'')); [$start,$end]=rangeParams();
         if ($action==='chart') {
-            $metrics=['light_lux','temperature_c','humidity_pct','pressure_hpa','gas_ohm','mq_adc_mv','mq_ao_v','radar_presence','mq_smoke'];
+            $metrics=['eco2_ppm','bvoc_ppm','iaq','static_iaq','gas_percentage','compensated_gas','raw_temperature_c','raw_humidity_pct','light_lux','temperature_c','humidity_pct','pressure_hpa','gas_ohm','mq_adc_mv','mq_ao_v','radar_presence','mq_smoke'];
             $metric=$_GET['metric']??'temperature_c'; if (!in_array($metric,$metrics,true)) throw new InvalidArgumentException('指标无效');
             $bucket=max(1,(int)ceil((strtotime($end)-strtotime($start))/1200));
             $expr=in_array($metric,['radar_presence','mq_smoke'],true)?"CASE WHEN data->>'$metric'='true' THEN 1 WHEN data->>'$metric'='false' THEN 0 END":"(data->>'$metric')::double precision";
@@ -76,7 +76,7 @@ try {
         if ($action==='export') {
             header('Content-Type: text/csv; charset=utf-8'); header('Content-Disposition: attachment; filename="sensor-data.csv"');
             $out=fopen('php://output','w'); fwrite($out,"\xEF\xBB\xBF");
-            $keys=['light_lux','temperature_c','humidity_pct','pressure_hpa','gas_ohm','radar_presence','mq_adc_raw','mq_adc_mv','mq_ao_v','mq_gpio','mq_smoke','mq_ready'];
+            $keys=['eco2_ppm','bvoc_ppm','iaq','static_iaq','gas_percentage','compensated_gas','raw_temperature_c','raw_humidity_pct','light_lux','temperature_c','humidity_pct','pressure_hpa','gas_ohm','radar_presence','mq_adc_raw','mq_adc_mv','mq_ao_v','mq_gpio','mq_smoke','mq_ready'];
             fputcsv($out,array_merge(['observed_at_utc','received_at_utc','clock_quality','reason'],$keys),',','"','');
             $cursor=query('SELECT observed_at,received_at,clock_quality,reason,data FROM samples WHERE device_id=? AND observed_at>=? AND observed_at<=? ORDER BY observed_at,id LIMIT 200000',[$d['id'],$start,$end]);
             while($row=$cursor->fetch(PDO::FETCH_ASSOC)) { $data=json_decode($row['data'],true); $values=array_map(fn($k)=>is_bool($data[$k]??null)?($data[$k]?'1':'0'):($data[$k]??''),$keys); fputcsv($out,array_merge(array_slice($row,0,4),$values),',','"',''); } fclose($out); exit;

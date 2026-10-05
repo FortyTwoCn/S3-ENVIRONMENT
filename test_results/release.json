@@ -1,7 +1,7 @@
 {
-  "release": "1.0.2",
-  "status": "I2C_SENSORS_VERIFIED_RADAR_MQ_PENDING",
-  "date": "2026-10-05T14:07:53.294049+00:00",
+  "release": "1.1.0",
+  "status": "BSEC_I2C_VERIFIED_RADAR_MQ_PENDING",
+  "date": "2026-10-05T14:32:43.011381+00:00",
   "integration_checks": 36,
   "browser_checks": 11,
   "tls_checks": 4,
@@ -12,10 +12,13 @@
   "physical_esp32_tested": true,
   "physical_sensors_verified": false,
   "physical_websocket_authenticated": true,
-  "local_software_tests_note": "Full-suite results are historical. Firmware 1.0.2 compiled both variants; MQ regression and nullable telemetry checks passed. Physical BH1750/BME688 I2C detection, numeric readings, WSS upload, PostgreSQL storage, dashboard and immediate sample verified. LD2410C and MQ remain untested.",
+  "local_software_tests_note": "Historical full-suite results retained. 1.1.0 compiled both variants; air measurement/UI/legacy/MQ regression checks passed. Live verification status and actual available estimates recorded in physical_bsec_1.1.0.json.",
   "physical_i2c_sensors_verified": true,
   "verified_sensors": [
     "BH1750",
     "BME688"
-  ]
+  ],
+  "physical_bsec_estimates_verified": true,
+  "bsec_version": "2.6.1.0",
+  "bsec_status_uploaded": false
 }

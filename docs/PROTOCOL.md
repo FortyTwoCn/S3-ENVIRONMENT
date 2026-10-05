@@ -28,6 +28,10 @@
     "humidity_pct": 51.3,
     "pressure_hpa": 1010.2,
     "gas_ohm": 93500,
+    "eco2_ppm": 823.5, "bvoc_ppm": 0.672,
+    "iaq": 76.2, "static_iaq": 81.4,
+    "gas_percentage": 63.8, "compensated_gas": 10.93,
+    "raw_temperature_c": 27.4, "raw_humidity_pct": 47.8,
     "bh1750_ok": true, "bme688_ok": true,
     "radar_presence": true, "radar_ok": true,
     "radar_uart_bytes": 2048, "radar_uart_age_ms": 20,
@@ -70,3 +74,7 @@ reason 可选 `boot`、`periodic`、`requested`、`alarm`、`recovered`。请求
 设备 / 浏览器每约 25 秒发送 `{"type":"ping"}`，服务器返回 `pong`。服务器向已鉴权浏览器发送 `sample`、`device_status`、`refresh_commands` 与 `config_ack`。告警邮件逻辑只处理足够新的、MQ 已启用且就绪的样本，按采样时间忽略较旧状态变化。
 
 所有样本的 metrics 放入 PostgreSQL JSONB，接口固定字段进行校验。浏览器通过 history / chart / export API 查看、聚合和导出，不能直接访问数据库。
+
+## BSEC numeric fields (firmware 1.1.0)
+
+`eco2_ppm`, `bvoc_ppm`, `iaq`, `static_iaq`, `gas_percentage`, `compensated_gas`, `raw_temperature_c`, `raw_humidity_pct` are optional numeric measurements; old firmware and unavailable estimates use null. The existing temperature/humidity become heater-compensated values. No BSEC accuracy, run-in, stabilization or calibration statuses are sent or stored. These additions keep protocol v1 and the existing JSONB schema. Mean/min/max charts, history and CSV support all fields. See [BME688 output meanings](BME688.md).

@@ -9,7 +9,7 @@ final class Telemetry {
         if (!in_array($m['reason']??'', ['boot','periodic','requested','alarm','recovered'],true)) throw new \InvalidArgumentException('reason');
         $in=$m['data']??null; if (!is_array($in)) throw new \InvalidArgumentException('data');
         $out=[];
-        $ranges=['light_lux'=>[0,200000],'temperature_c'=>[-50,100],'humidity_pct'=>[0,100],'pressure_hpa'=>[200,1300],'gas_ohm'=>[0,1000000000],'mq_adc_raw'=>[0,4095],'mq_adc_mv'=>[0,3300],'mq_ao_v'=>[0,6.6],'rssi_dbm'=>[-127,0],'uptime_s'=>[0,4294967295],'queue_dropped'=>[0,4294967295],'radar_uart_bytes'=>[0,4294967295],'radar_uart_age_ms'=>[0,4294967295],'sensor_age_ms'=>[0,4294967295]];
+        $ranges=['eco2_ppm'=>[0,100000],'bvoc_ppm'=>[0,10000],'iaq'=>[0,500],'static_iaq'=>[0,100000],'gas_percentage'=>[0,100],'compensated_gas'=>[-100,100],'raw_temperature_c'=>[-50,100],'raw_humidity_pct'=>[0,100],'light_lux'=>[0,200000],'temperature_c'=>[-50,100],'humidity_pct'=>[0,100],'pressure_hpa'=>[200,1300],'gas_ohm'=>[0,1000000000],'mq_adc_raw'=>[0,4095],'mq_adc_mv'=>[0,3300],'mq_ao_v'=>[0,6.6],'rssi_dbm'=>[-127,0],'uptime_s'=>[0,4294967295],'queue_dropped'=>[0,4294967295],'radar_uart_bytes'=>[0,4294967295],'radar_uart_age_ms'=>[0,4294967295],'sensor_age_ms'=>[0,4294967295]];
         foreach($ranges as $k=>$range) {
             $v=$in[$k]??null;
             if ($v!==null && (!is_int($v)&&!is_float($v) || !is_finite((float)$v) || $v<$range[0] || $v>$range[1])) throw new \InvalidArgumentException('value_'.$k);

@@ -6,7 +6,7 @@
 #include <Preferences.h>
 #include <ArduinoJson.h>
 #include <BH1750.h>
-#include <Adafruit_BME680.h>
+#include "air_quality.h"
 #include <esp_system.h>
 #include <esp_heap_caps.h>
 #include <utility>
@@ -19,14 +19,14 @@ constexpr int LD_OUT_PIN=16, MQ_ADC_PIN=4, MQ_DO_PIN=5, CONFIG_BUTTON=0;
 constexpr float MQ_RTOP=6800, MQ_RBOTTOM=7500, MQ_RLOAD=100000;
 constexpr float MQ_RLOW=1.0f/(1.0f/MQ_RBOTTOM+1.0f/MQ_RLOAD);
 constexpr float MQ_AO_SCALE=(MQ_RTOP+MQ_RLOW)/MQ_RLOW;
-constexpr char VERSION[]="carrier-network-1.0.2";
+constexpr char VERSION[]="carrier-network-1.1.0";
 constexpr size_t QUEUE_SIZE=256; // bounded RAM, not flash: avoids continuous NVS wear
 
 Preferences prefs;
 WebServer portal(80);
 WebSocketsClient ws;
 BH1750 light;
-Adafruit_BME680 bme(&Wire);
+uint32_t airGeneration=0;
 HardwareSerial radar(1);
 
 struct ConnectionConfig { String ssid,password,host,path,token,ca; uint16_t port=443; bool tls=true; } cfg;
@@ -57,7 +57,7 @@ struct QueuedSample {
 QueuedSample queueItems[QUEUE_SIZE]; size_t queueCount=0;
 String bootId,apPassword,portalCsrf,pendingRequest;
 uint32_t sequence=0,queueDropped=0,bootMs=0,nextReport=0,nextSense=0,nextWifi=0,nextWs=0,nextPing=0;
-uint32_t mqEnabledAt=0,conditionSince=0,buttonSince=0,bmeReadyAt=0,lastUartAt=0,uartTotal=0;
+uint32_t mqEnabledAt=0,conditionSince=0,buttonSince=0,lastUartAt=0,uartTotal=0;
 uint32_t wifiBackoff=1000,wsBackoff=1000,ackDeadline=0;
 bool portalActive=false,wsStarted=false,wsAuthenticated=false,inFlight=false;
 bool bmePresent=false,lightPresent=false,conditionInitialized=false,lastCondition=false;
@@ -80,6 +80,7 @@ void printSensorStatus(){
   Serial.printf("I2C: SDA=GPIO%d level=%d SCL=GPIO%d level=%d\n",SDA_PIN,digitalRead(SDA_PIN),SCL_PIN,digitalRead(SCL_PIN));
   if(sensors.lightOk)Serial.printf("Light lux=%.2f\n",sensors.lux);
   if(sensors.bmeOk)Serial.printf("BME: temperature=%.2f C humidity=%.2f %% pressure=%.2f hPa gas=%.0f ohm\n",sensors.temp,sensors.humidity,sensors.pressure,sensors.gas);
+  if(air.ok)Serial.printf("BSEC: eCO2=%.1f ppm bVOC=%.3f ppm IAQ=%.1f static_IAQ=%.1f gas_pct=%.1f compensated_gas=%.3f\n",air.eco2,air.bvoc,air.iaq,air.staticIaq,air.gasPercentage,air.compensatedGas);
   if(!policy.mqEnabled)Serial.println("MQ disabled: floating ADC/GPIO values are not uploaded");
 }
 
@@ -103,9 +104,9 @@ void scanI2c(){
 
 void initializeI2cSensors(){
   lightPresent=light.begin(BH1750::CONTINUOUS_HIGH_RES_MODE,0x23,&Wire);if(!lightPresent)lightPresent=light.begin(BH1750::CONTINUOUS_HIGH_RES_MODE,0x5C,&Wire);
-  bmePresent=bme.begin(0x76);if(!bmePresent)bmePresent=bme.begin(0x77);
+  bmePresent=beginAirQuality(Wire);airGeneration=0;
   sensors.lightOk=sensors.bmeOk=false;sensors.lux=sensors.temp=sensors.humidity=sensors.pressure=sensors.gas=NAN;
-  if(bmePresent){bme.setTemperatureOversampling(BME680_OS_8X);bme.setHumidityOversampling(BME680_OS_2X);bme.setPressureOversampling(BME680_OS_4X);bme.setIIRFilterSize(BME680_FILTER_SIZE_3);bme.setGasHeater(320,150);}
+
   Serial.printf("BH1750=%s BME688=%s LD UART=256000 8N1\n",lightPresent?"found":"missing",bmePresent?"found":"missing");
 }
 
@@ -182,6 +183,10 @@ void queueTelemetry(const char* reason,const String& requestId=""){
   doc["reason"]=reason;if(requestId.length())doc["request_id"]=requestId;
   JsonObject data=doc.createNestedObject("data");
   setNumber(data,"light_lux",sensors.lux);setNumber(data,"temperature_c",sensors.temp);setNumber(data,"humidity_pct",sensors.humidity);setNumber(data,"pressure_hpa",sensors.pressure);setNumber(data,"gas_ohm",sensors.gas);
+  setNumber(data,"eco2_ppm",air.eco2);setNumber(data,"bvoc_ppm",air.bvoc);
+  setNumber(data,"iaq",air.iaq);setNumber(data,"static_iaq",air.staticIaq);
+  setNumber(data,"gas_percentage",air.gasPercentage);setNumber(data,"compensated_gas",air.compensatedGas);
+  setNumber(data,"raw_temperature_c",air.rawTemperature);setNumber(data,"raw_humidity_pct",air.rawHumidity);
   data["bh1750_ok"]=sensors.lightOk;data["bme688_ok"]=sensors.bmeOk;
   const bool radarOk=uartTotal>0&&millis()-lastUartAt<5000;data["radar_ok"]=radarOk;
   if(radarOk)data["radar_presence"]=sensors.presence;else data["radar_presence"]=nullptr;
@@ -228,18 +233,18 @@ void finishSensorCycle(){
   if(pendingRequest.length()){queueTelemetry("requested",pendingRequest);pendingRequest="";}
 }
 void pollSensors(){
+  // BSEC owns the BME heater and its 3-second schedule; reporting remains 5 minutes.
+  pollAirQuality();
   const uint32_t now=millis();
-  if(bmeReadyAt&&due(now,bmeReadyAt)){
-    const bool ok=bme.endReading();bmeReadyAt=0;sensors.bmeOk=ok;
-    if(ok){sensors.temp=bme.temperature;sensors.humidity=bme.humidity;sensors.pressure=bme.pressure/100.0f;sensors.gas=bme.gas_resistance;}
-    else sensors.temp=sensors.humidity=sensors.pressure=sensors.gas=NAN;
-    finishSensorCycle();
-  }
-  if(due(now,nextSense)&&!bmeReadyAt){
+  const bool fresh=air.ok&&air.generation!=airGeneration;
+  if(due(now,nextSense)||fresh){
     nextSense=now+2000;
     if(lightPresent){sensors.lux=light.readLightLevel();sensors.lightOk=isfinite(sensors.lux)&&sensors.lux>=0;if(!sensors.lightOk)sensors.lux=NAN;}
-    if(bmePresent){bmeReadyAt=bme.beginReading();if(!bmeReadyAt){sensors.bmeOk=false;sensors.temp=sensors.humidity=sensors.pressure=sensors.gas=NAN;finishSensorCycle();}}
-    else finishSensorCycle();
+    sensors.bmeOk=air.ok;sensors.temp=air.temperature;sensors.humidity=air.humidity;
+    sensors.pressure=air.pressure;sensors.gas=air.gas;
+    if(fresh){airGeneration=air.generation;finishSensorCycle();}
+    else if(!bmePresent||!air.ok)finishSensorCycle();
+    // An immediate request waits for the next real BSEC measurement, not a cached value.
   }
 }
 void wsEvent(WStype_t type,uint8_t* payload,size_t length){
@@ -310,7 +315,7 @@ void networkLoop(){
 void configurationTrigger(){
   const uint32_t now=millis();
   if(digitalRead(CONFIG_BUTTON)==LOW){if(!buttonSince)buttonSince=now;if(now-buttonSince>5000)startPortal();}else buttonSince=0;
-  while(Serial.available()){char c=Serial.read();if(c=='\n'||c=='\r'){serialLine.trim();if(serialLine=="CONFIG")startPortal();else if(serialLine=="STATUS"){printNetworkStatus();printSensorStatus();}else if(serialLine=="I2C_SCAN")scanI2c();else if(serialLine=="SENSOR_RETRY"){if(bmeReadyAt)Serial.println("Sensor retry deferred: reading in progress; retry command shortly");else{initializeI2cSensors();nextSense=millis();}}else if(serialLine=="REBOOT")ESP.restart();else if(serialLine=="WIFI_SCAN"&&!portalActive&&!wifiScanActive){WiFi.scanDelete();wifiScanActive=WiFi.scanNetworks(true)>=WIFI_SCAN_RUNNING;Serial.println("Wi-Fi diagnostic scan started");}serialLine="";}else if(serialLine.length()<40)serialLine+=c;}
+  while(Serial.available()){char c=Serial.read();if(c=='\n'||c=='\r'){serialLine.trim();if(serialLine=="CONFIG")startPortal();else if(serialLine=="STATUS"){printNetworkStatus();printSensorStatus();}else if(serialLine=="I2C_SCAN")scanI2c();else if(serialLine=="SENSOR_RETRY"){initializeI2cSensors();nextSense=millis();}else if(serialLine=="REBOOT")ESP.restart();else if(serialLine=="WIFI_SCAN"&&!portalActive&&!wifiScanActive){WiFi.scanDelete();wifiScanActive=WiFi.scanNetworks(true)>=WIFI_SCAN_RUNNING;Serial.println("Wi-Fi diagnostic scan started");}serialLine="";}else if(serialLine.length()<40)serialLine+=c;}
 }
 void setup(){
   Serial.begin(115200);delay(800);Serial.println("\nESP32-S3 Sensor Carrier Network Firmware");
@@ -329,6 +334,6 @@ void setup(){
 void loop(){
   receiveRadar();configurationTrigger();pollSensors();networkLoop();
   const uint32_t now=millis();
-  if(due(now,nextReport)&&sensors.sampledAt&&!bmeReadyAt){queueTelemetry(sequence==0?"boot":"periodic");nextReport=now+policy.interval*1000;}
+  if(due(now,nextReport)&&sensors.sampledAt){queueTelemetry(sequence==0?"boot":"periodic");nextReport=now+policy.interval*1000;}
   delay(2);
 }

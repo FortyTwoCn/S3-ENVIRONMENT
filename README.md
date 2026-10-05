@@ -11,7 +11,7 @@ ESP32-S3 多传感器环境监测项目：可插拔 PCB 底板、ESP32 固件，
 | PCB | R1.1，KiCad 9，110×90 mm，2 层 FR4，1.6 mm，1 oz，4 个 M3 安装孔 |
 | PCB 检查 | ERC、DRC、未连接网络、原理图 / PCB 一致性均为 0 问题；自动电气和天线铜区检查通过 |
 | PCB 制造文件 | 已提供 Gerber / 钻孔；**MECHANICAL_DIMENSION_PENDING，尚未标记 PRODUCTION VERIFIED** |
-| 网络固件 | `carrier-network-1.0.2`，16MB Flash / 8MB OPI PSRAM，两种 USB 构建版本 |
+| 网络固件 | `carrier-network-1.1.0`（Bosch BSEC2），16MB Flash / 8MB OPI PSRAM，两种 USB 构建版本 |
 | 实物验证 | 2026-10-05 经 CH343 / COM4 烧录；Flash / PSRAM、重启自动联网、WSS 上传、PostgreSQL 入库和网页立即采样已通过 |
 | 网站 | 已部署至 [s.xuanknow.cn](https://s.xuanknow.cn)，Linux / 宝塔 / Nginx / PHP 8.5 / PostgreSQL，SSL 由宝塔管理 |
 | 传感器 | 载板尚未到货；杜邦线接法下 BH1750 / BME688 读取、上传、入库和网页立即采样已通过；MQ 未连接、雷达未供电，完整四传感器测试尚未通过 |
@@ -112,10 +112,15 @@ Linux 将 `COM4` 改成实际串口，例如 `/dev/ttyUSB0`。原生 USB CDC 版
 
 真实 `.env`、网站密码、设备令牌、SMTP 授权码、SSH 私钥、NVS 配网镜像、数据库与原 Flash 备份均未提交。需要为新的部署生成自己的密钥和设备令牌。实物记录中的 Wi-Fi 名称也已脱敏。
 
-BH1750 / BME688 最新实测读数、I2C 地址及网页入库验证见 [physical_i2c_1.0.2.json](test_results/physical_i2c_1.0.2.json) 和 [实测页面截图](screenshots/physical_i2c_20261005.png)。
+BH1750 / BME688 在 1.0.2 下的历史实测读数、I2C 地址及网页入库验证见 [physical_i2c_1.0.2.json](test_results/physical_i2c_1.0.2.json) 和 [实测页面截图](screenshots/physical_i2c_20261005.png)。
 
 1.0.2 修正接线前的实物烧录、I2C 扫描、MQ 空值入库与立即采样验证见 [physical_bringup_1.0.2.json](test_results/physical_bringup_1.0.2.json)。MQ 显示回归检查：`node tests/mq_display.cjs`；MQ 遥测契约检查：`php tests/telemetry_mq.php`。
 
 1.0.1 的历史物理网络验证见 [physical_website.json](test_results/physical_website.json) 和 [烧录启动检查](test_results/physical_flash.json)。`tests/` 的软件测试使用隔离的 `*_test` 数据库，包含清空测试表的操作；不会默认执行，也不应配置为真实监测数据库。
 
 LD2410C、MQ 及真实烟雾邮件告警仍待实物验证；不能由两块 I2C 传感器通过就认定全部模块通过。硬件的 **MECHANICAL VERIFICATION REQUIRED** 状态保留在全部制造说明中。
+
+
+固件 1.1.0 增加 Bosch BSEC 的 **eCO₂、bVOC、IAQ、静态 IAQ、相对气体水平、补偿气体信号及未补偿温湿度**，网页支持实时卡片、历史表格、各指标曲线和 CSV。准确度、预热和校准状态不上传；无有效估计时显示空缺。eCO₂ 是等效估计，BME688 不直接测量 CO₂。接口、GPIO 和 PCB 均不变，BSEC 在设备内部按约 3 秒采样，上报仍默认每 5 分钟一次。说明见 [BME688 输出](docs/BME688.md)，实测见 [1.1.0 验证](test_results/physical_bsec_1.1.0.json)。
+
+BSEC 回归检查：`node tests/air_display.cjs`、`php tests/telemetry_air.php`。Bosch 专有算法许可见 [第三方声明](firmware/THIRD_PARTY_NOTICES.md)。
