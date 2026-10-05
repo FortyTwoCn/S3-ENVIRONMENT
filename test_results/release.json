@@ -1,7 +1,7 @@
 {
-  "release": "1.0.1",
-  "status": "FIRMWARE_CONNECTED_SENSORS_PENDING",
-  "date": "2026-10-05T02:09:29Z",
+  "release": "1.0.2",
+  "status": "FIRMWARE_CONNECTED_I2C_CONNECTION_DIAGNOSIS_PENDING",
+  "date": "2026-10-05T14:05:17.438229+00:00",
   "integration_checks": 36,
   "browser_checks": 11,
   "tls_checks": 4,
@@ -12,5 +12,5 @@
   "physical_esp32_tested": true,
   "physical_sensors_verified": false,
   "physical_websocket_authenticated": true,
-  "local_software_tests_note": "Historical suite results retained; firmware 1.0.1 compiled for both variants and physically verified separately."
+  "local_software_tests_note": "Historical full-suite results retained. 1.0.2 compiled both USB variants; MQ regression, telemetry contract and live website/sample-now verified. I2C scan found zero physical modules."
 }

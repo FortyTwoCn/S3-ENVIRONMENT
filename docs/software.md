@@ -1,12 +1,10 @@
 # ESP32-S3 多传感器网络监测站
 
-本文命令均在仓库根目录执行，`server/`、`firmware/`、`hardware/` 等路径相对于仓库根目录。
-
 这套工程把现有 ESP32-S3 载板上的传感器读数，经 Wi-Fi / WebSocket 上传至 PHP 网站，使用 PostgreSQL 保存。网页支持密码登录、记住登录、历史表格、曲线、CSV 导出、立即采样、设备配置与 SMTP 烟雾通知。
 
 已包含完整网站源码、PHP 依赖、数据库结构、ESP32 源码、两种 USB 版本的预编译固件、Windows 启停脚本、Docker 公网部署配置和测试结果。没有将 Wi-Fi 密码、网站密码或实际邮箱授权码写进固件。网页截图使用明确标注的模拟数据。
 
-**网站已部署到 https://s.xuanknow.cn；2026-10-05 已通过 COM4 给实物烧录 `carrier-network-1.0.1`，确认 16MB Flash、8MB PSRAM、重启自动联网、WSS 上传和 PostgreSQL 入库，网页“立即采样”已得到实物响应。验证结果见 `test_results/physical_flash.json` 和 `test_results/physical_website.json`。用户确认电路板尚未到货、传感器尚未接入，传感器测量留待后续验证。** 原 PCB 的机械验证状态仍以 `hardware/README.md` 为准。
+**网站已部署到 https://s.xuanknow.cn；2026-10-05 已通过 COM4 给实物烧录 `carrier-network-1.0.2`，确认 16MB Flash、8MB PSRAM、自动联网、WSS 上传和 PostgreSQL 入库，网页“立即采样”已得到实物响应。1.0.2 修复 MQ 未启用时上传悬空读数的问题，增加 I2C 扫描和传感器重试命令。当前两块 I2C 模块尚未应答，MQ 未连接、雷达未供电，不能声称四传感器测量已通过。最新验证见 `test_results/physical_bringup_1.0.2.json`；`physical_flash.json` 和 `physical_website.json` 保留 1.0.1 的历史联网验证。** 原 PCB 的机械验证状态仍以 `hardware/README.md` 为准。
 
 ## 1. 先在这台 Windows 电脑启动
 
@@ -127,6 +125,10 @@ ESP32 仍通过开发板 USB 供电，GY-302 / BME688 使用开发板 3.3V。MQ 
 建议先按硬件工程 bring-up 顺序检查电源、USB、BH1750、BME688、雷达，最后接 MQ。确认 GPIO4 对地电压安全、分压比例正确，以及实际 DO 在阈值前后的极性。
 
 网站默认 **不启用 MQ 烟雾判定**。底板没有传感器 5V 在位检测；未插 MQ / 未供电时，GPIO5 的下拉/上拉状态可能与告警相同。确认 MQ 供电与阈值后，再在网页勾选“确认 MQ 已供电，启用烟雾检测”。不应仅凭插上 ESP32 就自动把该信号当成烟雾。
+
+固件 1.0.2 开始，`mq_enabled=false` 时原始 ADC、分压电压、AO 电压和 GPIO5 均上传 `null`；网站显示“未启用”，不把悬空读数当作 MQ 数据。每条新记录带 `mq_enabled` 标志。旧版固件留下的历史记录保留原样，旧记录中的数值不证明 MQ 当时已连接。即使启用 MQ，程序也不能自动判断模拟模块是否真实插入，启用前仍需人工检查供电和保护电路。
+
+串口 115200 新增 `I2C_SCAN`（扫描 GPIO8/SDA、GPIO9/SCL）、`SENSOR_RETRY`（重新初始化两块 I2C 模块，无需重新烧录）和 `REBOOT`。`STATUS` 同时打印检测状态与 SDA/SCL 电平。正常地址为 BH1750 `0x23/0x5C`、BME688 `0x76/0x77`。若扫描为 0 个设备，先检查模块端 3.3V、共地、排针焊接、杜邦线接触及 SDA/SCL 实际导通；图纸上连接正确不代表实物已导通。串口诊断期间不要发送 `CONFIG`，除非确实需要重新配网。
 
 默认预热 180 秒、持续触发 3 秒、持续恢复 10 秒。预热和首次老化时长应按**实际 MQ 型号**调整；180 秒不是所有型号充分老化的保证。网页支持数字 DO、模拟 ADC 或二者任一触发；模拟阈值单位为 **分压后的 ADC mV**，默认阈值 2000mV、回差 100mV，须按实际基线设定。
 
@@ -264,7 +266,7 @@ docker compose --env-file server/.env up -d --force-recreate web websocket worke
 
 首次实物验收建议：
 
-1. 确认硬件电源 / 插接方向及 R1.1 保护电路；读取串口 Flash / PSRAM 容量，硬件分别为 16MB / 8MB。PSRAM 日志显示可用堆，实物为 8386279 字节，少量堆管理开销属正常。
+1. 确认硬件电源 / 插接方向及 R1.1 保护电路；读取串口 Flash / PSRAM 容量，预期分别 16777216 / 8388608 字节。
 2. 配网后网站显示在线；确认光照、温湿度 / 气压、气体电阻和雷达读数，缺失模块应显示 `--`。
 3. 点击“立即采样”，应在 20 秒内显示“已取得新读数”。
 4. 暂停 Wi-Fi 或网站后恢复，确认设备和网页自行重连；补传数据不得重复入库。

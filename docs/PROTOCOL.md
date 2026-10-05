@@ -32,6 +32,7 @@
     "radar_presence": true, "radar_ok": true,
     "radar_uart_bytes": 2048, "radar_uart_age_ms": 20,
     "radar_uart_hex": "f4f3f2f1",
+    "mq_enabled": true,
     "mq_adc_raw": 1240, "mq_adc_mv": 940.0, "mq_ao_v": 1.856,
     "mq_gpio": false, "mq_ready": true, "mq_smoke": false,
     "rssi_dbm": -53, "uptime_s": 300,
@@ -42,7 +43,7 @@
 
 `boot_id` 每次上电随机变化，`seq` 同一次上电递增。唯一键为 `(device_id, boot_id, seq)`。`captured_at` 为 UTC epoch 秒，未 NTP 校时则为 null；`queue_age_s` 在实际发送时更新，服务器可估计该读数已排队多久。缺失 / 无效指标应为 null，不能用 0 代替。
 
-reason 可选 `boot`、`periodic`、`requested`、`alarm`、`recovered`。请求采样时同时包含 `request_id`。MQ 未预热 / 未启用时 `mq_ready=false`、`mq_smoke=null`，但仍可查看原始电压与 GPIO。
+reason 可选 `boot`、`periodic`、`requested`、`alarm`、`recovered`。请求采样时同时包含 `request_id`。固件 1.0.2 开始增加可选布尔字段 `mq_enabled`：关闭时，`mq_enabled=false`、`mq_ready=false`，`mq_adc_raw`、`mq_adc_mv`、`mq_ao_v`、`mq_gpio`、`mq_smoke` 全部为 null，避免未接模块的悬空读数成为测量数据。启用但尚未完成预热时可查看原始 ADC / GPIO，`mq_smoke` 仍为 null。老版固件没有 `mq_enabled` 时服务器保留兼容，存为 null；不能据此推断旧记录中的模块连接状态。新增字段不改变协议版本号。
 
 收到合法样本并提交数据库后返回：
 

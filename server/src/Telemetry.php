@@ -15,7 +15,7 @@ final class Telemetry {
             if ($v!==null && (!is_int($v)&&!is_float($v) || !is_finite((float)$v) || $v<$range[0] || $v>$range[1])) throw new \InvalidArgumentException('value_'.$k);
             $out[$k]=$v;
         }
-        foreach(['radar_presence','mq_gpio','mq_smoke','mq_ready','bh1750_ok','bme688_ok','radar_ok'] as $k) {
+        foreach(['radar_presence','mq_enabled','mq_gpio','mq_smoke','mq_ready','bh1750_ok','bme688_ok','radar_ok'] as $k) {
             $v=$in[$k]??null; if ($v!==null && !is_bool($v)) throw new \InvalidArgumentException('bool_'.$k); $out[$k]=$v;
         }
         $hex=$in['radar_uart_hex']??'';

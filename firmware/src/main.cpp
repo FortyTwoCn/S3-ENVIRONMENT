@@ -19,7 +19,7 @@ constexpr int LD_OUT_PIN=16, MQ_ADC_PIN=4, MQ_DO_PIN=5, CONFIG_BUTTON=0;
 constexpr float MQ_RTOP=6800, MQ_RBOTTOM=7500, MQ_RLOAD=100000;
 constexpr float MQ_RLOW=1.0f/(1.0f/MQ_RBOTTOM+1.0f/MQ_RLOAD);
 constexpr float MQ_AO_SCALE=(MQ_RTOP+MQ_RLOW)/MQ_RLOW;
-constexpr char VERSION[]="carrier-network-1.0.1";
+constexpr char VERSION[]="carrier-network-1.0.2";
 constexpr size_t QUEUE_SIZE=256; // bounded RAM, not flash: avoids continuous NVS wear
 
 Preferences prefs;
@@ -73,6 +73,40 @@ void printNetworkStatus(){
   if(WiFi.status()==WL_CONNECTED){
     Serial.printf("Wi-Fi IP=%s gateway=%s DNS=%s RSSI=%d channel=%d time_valid=%d WS_authenticated=%d\n",WiFi.localIP().toString().c_str(),WiFi.gatewayIP().toString().c_str(),WiFi.dnsIP().toString().c_str(),WiFi.RSSI(),WiFi.channel(),time(nullptr)>=1700000000,wsAuthenticated);
   }
+}
+
+void printSensorStatus(){
+  Serial.printf("Sensors: BH1750_present=%d read_ok=%d BME688_present=%d read_ok=%d MQ_enabled=%d radar_uart_bytes=%lu\n",lightPresent,sensors.lightOk,bmePresent,sensors.bmeOk,policy.mqEnabled,static_cast<unsigned long>(uartTotal));
+  Serial.printf("I2C: SDA=GPIO%d level=%d SCL=GPIO%d level=%d\n",SDA_PIN,digitalRead(SDA_PIN),SCL_PIN,digitalRead(SCL_PIN));
+  if(sensors.lightOk)Serial.printf("Light lux=%.2f\n",sensors.lux);
+  if(sensors.bmeOk)Serial.printf("BME: temperature=%.2f C humidity=%.2f %% pressure=%.2f hPa gas=%.0f ohm\n",sensors.temp,sensors.humidity,sensors.pressure,sensors.gas);
+  if(!policy.mqEnabled)Serial.println("MQ disabled: floating ADC/GPIO values are not uploaded");
+}
+
+void scanI2c(){
+  Serial.printf("I2C scan start: SDA=GPIO%d SCL=GPIO%d levels=%d/%d\n",SDA_PIN,SCL_PIN,digitalRead(SDA_PIN),digitalRead(SCL_PIN));
+  if(digitalRead(SDA_PIN)==LOW||digitalRead(SCL_PIN)==LOW){Serial.println("I2C scan skipped: bus held LOW; check power, GND, SDA/SCL and shorts");return;}
+  int found=0,errors=0;
+  for(uint8_t address=8;address<120;address++){
+    Wire.beginTransmission(address);const uint8_t error=Wire.endTransmission();
+    if(error==0){
+      found++;Serial.printf("I2C ACK address=0x%02X\n",address);
+      if(address==0x76||address==0x77){
+        Wire.beginTransmission(address);Wire.write(0xD0);
+        if(Wire.endTransmission(false)==0&&Wire.requestFrom(address,static_cast<uint8_t>(1))==1)Serial.printf("BME chip_id=0x%02X (BME68x expected 0x61)\n",Wire.read());
+      }
+    }else if(error!=2)errors++;
+    delay(1);
+  }
+  Serial.printf("I2C scan complete: found=%d bus_errors=%d expected BH1750=0x23/0x5C BME688=0x76/0x77\n",found,errors);
+}
+
+void initializeI2cSensors(){
+  lightPresent=light.begin(BH1750::CONTINUOUS_HIGH_RES_MODE,0x23,&Wire);if(!lightPresent)lightPresent=light.begin(BH1750::CONTINUOUS_HIGH_RES_MODE,0x5C,&Wire);
+  bmePresent=bme.begin(0x76);if(!bmePresent)bmePresent=bme.begin(0x77);
+  sensors.lightOk=sensors.bmeOk=false;sensors.lux=sensors.temp=sensors.humidity=sensors.pressure=sensors.gas=NAN;
+  if(bmePresent){bme.setTemperatureOversampling(BME680_OS_8X);bme.setHumidityOversampling(BME680_OS_2X);bme.setPressureOversampling(BME680_OS_4X);bme.setIIRFilterSize(BME680_FILTER_SIZE_3);bme.setGasHeater(320,150);}
+  Serial.printf("BH1750=%s BME688=%s LD UART=256000 8N1\n",lightPresent?"found":"missing",bmePresent?"found":"missing");
 }
 
 bool due(uint32_t now,uint32_t deadline){ return static_cast<int32_t>(now-deadline)>=0; }
@@ -152,15 +186,17 @@ void queueTelemetry(const char* reason,const String& requestId=""){
   const bool radarOk=uartTotal>0&&millis()-lastUartAt<5000;data["radar_ok"]=radarOk;
   if(radarOk)data["radar_presence"]=sensors.presence;else data["radar_presence"]=nullptr;
   data["radar_uart_bytes"]=uartTotal;if(uartTotal)data["radar_uart_age_ms"]=millis()-lastUartAt;else data["radar_uart_age_ms"]=nullptr;data["radar_uart_hex"]=uartHex;
-  data["mq_adc_raw"]=sensors.adcRaw;data["mq_adc_mv"]=sensors.adcMv;data["mq_ao_v"]=sensors.aoV;
-  data["mq_gpio"]=sensors.gpio;data["mq_ready"]=sensors.ready;if(sensors.ready)data["mq_smoke"]=sensors.smoke;else data["mq_smoke"]=nullptr;
+  data["mq_enabled"]=policy.mqEnabled;
+  if(policy.mqEnabled){data["mq_adc_raw"]=sensors.adcRaw;data["mq_adc_mv"]=sensors.adcMv;data["mq_ao_v"]=sensors.aoV;data["mq_gpio"]=sensors.gpio;}
+  else{data["mq_adc_raw"]=nullptr;data["mq_adc_mv"]=nullptr;data["mq_ao_v"]=nullptr;data["mq_gpio"]=nullptr;}
+  data["mq_ready"]=sensors.ready;if(sensors.ready)data["mq_smoke"]=sensors.smoke;else data["mq_smoke"]=nullptr;
   data["rssi_dbm"]=WiFi.status()==WL_CONNECTED?WiFi.RSSI():-127;data["uptime_s"]=(millis()-bootMs)/1000;data["queue_dropped"]=queueDropped;data["sensor_age_ms"]=millis()-sensors.sampledAt;
   const size_t bytes=measureJson(doc)+1;
   char* buffer=static_cast<char*>(heap_caps_malloc(bytes,MALLOC_CAP_SPIRAM|MALLOC_CAP_8BIT));
   if(!buffer&&ESP.getFreeHeap()>bytes+96000)buffer=static_cast<char*>(malloc(bytes));
   if(!buffer){queueDropped++;Serial.println("Queue allocation failed; check N16R8 PSRAM configuration");return;}
   auto &item=queueItems[queueCount++];item.seq=doc["seq"].as<uint32_t>();item.capturedMs=sensors.sampledAt;item.event=event;item.reset();item.payload=buffer;serializeJson(doc,item.payload,bytes);
-  Serial.printf("Sample %lu %s: lux=%.1f T=%.2f RH=%.1f MQ=%.0fmV smoke=%d ready=%d queue=%u\n",static_cast<unsigned long>(item.seq),reason,sensors.lux,sensors.temp,sensors.humidity,sensors.adcMv,sensors.smoke,sensors.ready,static_cast<unsigned>(queueCount));
+  Serial.printf("Sample %lu %s: lux=%.1f T=%.2f RH=%.1f MQ_enabled=%d MQ=%.0fmV smoke=%d ready=%d queue=%u\n",static_cast<unsigned long>(item.seq),reason,sensors.lux,sensors.temp,sensors.humidity,policy.mqEnabled,policy.mqEnabled?sensors.adcMv:NAN,sensors.smoke,sensors.ready,static_cast<unsigned>(queueCount));
   if((event||requestId.length())&&queueCount>1){
     // Immediate requests and alarms bypass ordinary backlog; preserve current in-flight ACK.
     const size_t at=inFlight?1:0;QueuedSample urgent=std::move(queueItems[queueCount-1]);
@@ -274,21 +310,18 @@ void networkLoop(){
 void configurationTrigger(){
   const uint32_t now=millis();
   if(digitalRead(CONFIG_BUTTON)==LOW){if(!buttonSince)buttonSince=now;if(now-buttonSince>5000)startPortal();}else buttonSince=0;
-  while(Serial.available()){char c=Serial.read();if(c=='\n'||c=='\r'){serialLine.trim();if(serialLine=="CONFIG")startPortal();else if(serialLine=="STATUS")printNetworkStatus();else if(serialLine=="WIFI_SCAN"&&!portalActive&&!wifiScanActive){WiFi.scanDelete();wifiScanActive=WiFi.scanNetworks(true)>=WIFI_SCAN_RUNNING;Serial.println("Wi-Fi diagnostic scan started");}serialLine="";}else if(serialLine.length()<40)serialLine+=c;}
+  while(Serial.available()){char c=Serial.read();if(c=='\n'||c=='\r'){serialLine.trim();if(serialLine=="CONFIG")startPortal();else if(serialLine=="STATUS"){printNetworkStatus();printSensorStatus();}else if(serialLine=="I2C_SCAN")scanI2c();else if(serialLine=="SENSOR_RETRY"){if(bmeReadyAt)Serial.println("Sensor retry deferred: reading in progress; retry command shortly");else{initializeI2cSensors();nextSense=millis();}}else if(serialLine=="REBOOT")ESP.restart();else if(serialLine=="WIFI_SCAN"&&!portalActive&&!wifiScanActive){WiFi.scanDelete();wifiScanActive=WiFi.scanNetworks(true)>=WIFI_SCAN_RUNNING;Serial.println("Wi-Fi diagnostic scan started");}serialLine="";}else if(serialLine.length()<40)serialLine+=c;}
 }
 void setup(){
   Serial.begin(115200);delay(800);Serial.println("\nESP32-S3 Sensor Carrier Network Firmware");
   Serial.printf("Firmware %s | flash=%u PSRAM=%u\n",VERSION,ESP.getFlashChipSize(),ESP.getPsramSize());
-  Serial.println("MQ DO is inverted: typical alarm = GPIO5 HIGH. Serial commands: CONFIG, STATUS, WIFI_SCAN. Hold BOOT 5s after boot to configure.");
+  Serial.println("MQ DO is inverted: typical alarm = GPIO5 HIGH. Serial commands: CONFIG, STATUS, WIFI_SCAN, I2C_SCAN, SENSOR_RETRY, REBOOT. Hold BOOT 5s after boot to configure.");
   bootMs=millis();bootId=randomHex(8);prefs.begin("sensor_net",false);loadConnection();mqEnabledAt=millis();
   pinMode(CONFIG_BUTTON,INPUT_PULLUP);pinMode(LD_OUT_PIN,INPUT);pinMode(MQ_DO_PIN,INPUT);pinMode(MQ_ADC_PIN,INPUT);
   analogReadResolution(12);analogSetPinAttenuation(MQ_ADC_PIN,ADC_11db);
   radar.setRxBufferSize(2048);radar.begin(256000,SERIAL_8N1,LD_RX_PIN,LD_TX_PIN);
   Wire.begin(SDA_PIN,SCL_PIN);Wire.setClock(100000);Wire.setTimeOut(50);
-  lightPresent=light.begin(BH1750::CONTINUOUS_HIGH_RES_MODE,0x23,&Wire);if(!lightPresent)lightPresent=light.begin(BH1750::CONTINUOUS_HIGH_RES_MODE,0x5C,&Wire);
-  bmePresent=bme.begin(0x76);if(!bmePresent)bmePresent=bme.begin(0x77);
-  if(bmePresent){bme.setTemperatureOversampling(BME680_OS_8X);bme.setHumidityOversampling(BME680_OS_2X);bme.setPressureOversampling(BME680_OS_4X);bme.setIIRFilterSize(BME680_FILTER_SIZE_3);bme.setGasHeater(320,150);}
-  Serial.printf("BH1750=%s BME688=%s LD UART=256000 8N1\n",lightPresent?"found":"missing",bmePresent?"found":"missing");
+  initializeI2cSensors();scanI2c();
   WiFi.onEvent([](WiFiEvent_t event,WiFiEventInfo_t info){if(event==ARDUINO_EVENT_WIFI_STA_DISCONNECTED){wifiDisconnectReason=info.wifi_sta_disconnected.reason;Serial.printf("Wi-Fi disconnected: reason=%u\n",wifiDisconnectReason);}});
   if(!configComplete())startPortal();else{WiFi.mode(WIFI_STA);WiFi.setAutoReconnect(false);configTime(0,0,"pool.ntp.org","time.cloudflare.com","ntp.aliyun.com");nextWifi=millis();}
   nextSense=millis();nextReport=millis()+5000;

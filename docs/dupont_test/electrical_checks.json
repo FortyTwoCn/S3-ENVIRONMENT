@@ -1,0 +1,13 @@
+{
+  "diagram_version": "TEMP_DUPONT_V1",
+  "firmware": "carrier-network-1.0.1",
+  "gpio_matches_existing_firmware": true,
+  "adc_ratio": 0.5064145847400405,
+  "adc_at_5v": 2.532072923700203,
+  "adc_max_at_5_25v_1_percent_resistors": 2.684918882790189,
+  "mq_do_protection": "2N3904 NPN inverter, GPIO collector pulled up to 3V3 only",
+  "mq_alarm_gpio_high_compatible": true,
+  "power": "One regulated 5V source shared by ESP 5V pin, LD2410C and MQ; both USB ports disconnected",
+  "physical_build_tested": false,
+  "page_count": 2
+}

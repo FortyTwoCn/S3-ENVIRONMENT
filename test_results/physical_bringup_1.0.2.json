@@ -1,0 +1,25 @@
+{
+  "firmware": "carrier-network-1.0.2",
+  "timestamp_utc": "2026-10-05T14:05:17.438229+00:00",
+  "port": "COM4",
+  "flash_bytes": 16777216,
+  "psram_heap_bytes": 8386279,
+  "firmware_write_hash_verified": true,
+  "manual_boot_and_reset_required": true,
+  "websocket_and_database_verified": true,
+  "sample_now_verified": true,
+  "disabled_mq_fields_null": true,
+  "i2c_scan_devices": 0,
+  "i2c_sda_pin": 8,
+  "i2c_scl_pin": 9,
+  "physical_sensors_verified": false,
+  "physical_connection_status": "I2C modules not responding; MQ not connected; radar unpowered/disconnected",
+  "website_checks": [
+    "Real website MQ ADC card shows disabled without mV",
+    "Real website hides floating ADC/AO/GPIO diagnostics",
+    "Browser WebSocket reconnected after service restart",
+    "Website immediate-sample command completed on firmware 1.0.2; all disabled MQ fields stored as null",
+    "No dashboard JavaScript errors"
+  ],
+  "credentials_changed": false
+}

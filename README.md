@@ -11,10 +11,10 @@ ESP32-S3 多传感器环境监测项目：可插拔 PCB 底板、ESP32 固件，
 | PCB | R1.1，KiCad 9，110×90 mm，2 层 FR4，1.6 mm，1 oz，4 个 M3 安装孔 |
 | PCB 检查 | ERC、DRC、未连接网络、原理图 / PCB 一致性均为 0 问题；自动电气和天线铜区检查通过 |
 | PCB 制造文件 | 已提供 Gerber / 钻孔；**MECHANICAL_DIMENSION_PENDING，尚未标记 PRODUCTION VERIFIED** |
-| 网络固件 | `carrier-network-1.0.1`，16MB Flash / 8MB OPI PSRAM，两种 USB 构建版本 |
+| 网络固件 | `carrier-network-1.0.2`，16MB Flash / 8MB OPI PSRAM，两种 USB 构建版本 |
 | 实物验证 | 2026-10-05 经 CH343 / COM4 烧录；Flash / PSRAM、重启自动联网、WSS 上传、PostgreSQL 入库和网页立即采样已通过 |
 | 网站 | 已部署至 [s.xuanknow.cn](https://s.xuanknow.cn)，Linux / 宝塔 / Nginx / PHP 8.5 / PostgreSQL，SSL 由宝塔管理 |
-| 传感器 | 用户确认载板尚未到货、传感器暂未连接；测量和真实烟雾告警留待装板后验证 |
+| 传感器 | 载板尚未到货，杜邦线联调中；两块 I2C 模块暂无应答，MQ 未连接、雷达未供电；传感器测量尚未通过 |
 
 开发板排距 **25.40 mm**、针距 **2.54 mm**，每侧 22Pin。端部偏移、各模块本体尺寸及 USB 插头包络仍需实物确认。打板前按 [硬件说明](hardware/README.md) 核对 [1:1 校验 PDF](hardware/fabrication/ESP32_FOOTPRINT_1_TO_1_CHECK.pdf)，不要把暂定制造文件当作已完成机械验证的版本。
 
@@ -50,6 +50,7 @@ S3-ENVIRONMENT/
 - **打开和核对电路板**：[hardware/README.md](hardware/README.md)、[设计摘要](hardware/Design_Summary.md)、[BOM](hardware/fabrication/BOM.csv)、[Excel BOM](hardware/fabrication/BOM_R1_1.xlsx)。用 KiCad 9 打开 `hardware/esp32_sensor_carrier.kicad_pro`。
 - **部署网站**：[软件完整说明](docs/software.md)、[实际 Linux / 宝塔部署记录](docs/deployment/s_xuanknow_cn/README.md)。支持 Nginx 直接部署，Docker 是可选方式。
 - **烧录 / 配网**：[软件说明](docs/software.md)、[实物烧录记录](docs/device_flash/ESP32S3_COM4/README.md)。常用 USB 转串口版本是 `yd_uart`。
+- **用杜邦线测试**：[接线图和步骤](docs/dupont_test/README.md)，包括 MQ 必需保护电路；GPIO 按丝印数字识别。
 - **查看通信格式**：[WebSocket 协议](docs/PROTOCOL.md)。
 - **维护硬件**：[参数化与检查脚本](hardware/scripts/README.md)。重建布局脚本会产生未布线板，修改尺寸后需要重新布线和导出制造文件。
 
@@ -59,7 +60,7 @@ S3-ENVIRONMENT/
 
 网站使用访问密码登录，可记住登录；支持历史表格、曲线、CSV 导出和设备实时状态。ESP32 正常每 **300 秒**上传一次，断线自动重试，上电自动连接。网页可以请求立即采样，设备完成新的传感器测量后返回记录。
 
-PostgreSQL 默认保留最近 **60 天**，可在网页配置。网页还可设置 SMTP、收件邮箱与烟雾报警策略。SMTP 授权码加密保存；MQ 默认禁用，确认硬件供电、预热和输出极性后再启用。
+PostgreSQL 默认保留最近 **60 天**，可在网页配置。网页还可设置 SMTP、收件邮箱与烟雾报警策略。SMTP 授权码加密保存；MQ 默认禁用，确认硬件供电、预热和输出极性后再启用。1.0.2 在 MQ 禁用时上传空值，网页显示“未启用”，避免悬空引脚读数被误认为 MQ 测量；旧历史记录保留。
 
 ## GPIO 与接口
 
@@ -105,12 +106,14 @@ python -m platformio device monitor --port COM4 --baud 115200
 
 Linux 将 `COM4` 改成实际串口，例如 `/dev/ttyUSB0`。原生 USB CDC 版本使用 `yd_native_usb`，与 CH343 调试串口版本分别提供构建产物。
 
-源码和预编译固件不包含实际 Wi-Fi 密码或设备令牌。首次烧录后从串口查看临时配网 AP，打开 `http://192.168.4.1` 配置；已配置设备会自动连接。输入 `CONFIG` 或开机后长按 BOOT 5 秒可重新配置；`STATUS` 可查看连接诊断。
+源码和预编译固件不包含实际 Wi-Fi 密码或设备令牌。首次烧录后从串口查看临时配网 AP，打开 `http://192.168.4.1` 配置；已配置设备会自动连接。输入 `CONFIG` 或开机后长按 BOOT 5 秒可重新配置；`STATUS` 可查看连接和传感器诊断；`I2C_SCAN` 扫描地址，`SENSOR_RETRY` 重新初始化两块 I2C 模块，`REBOOT` 重启。
 
 ## 配置与验证记录
 
 真实 `.env`、网站密码、设备令牌、SMTP 授权码、SSH 私钥、NVS 配网镜像、数据库与原 Flash 备份均未提交。需要为新的部署生成自己的密钥和设备令牌。实物记录中的 Wi-Fi 名称也已脱敏。
 
-物理网络验证见 [physical_website.json](test_results/physical_website.json) 和 [烧录启动检查](test_results/physical_flash.json)。`tests/` 的软件测试使用隔离的 `*_test` 数据库，包含清空测试表的操作；不会默认执行，也不应配置为真实监测数据库。
+1.0.2 的实物烧录、I2C 扫描、MQ 空值入库与立即采样验证见 [physical_bringup_1.0.2.json](test_results/physical_bringup_1.0.2.json)。MQ 显示回归检查：`node tests/mq_display.cjs`；MQ 遥测契约检查：`php tests/telemetry_mq.php`。
+
+1.0.1 的历史物理网络验证见 [physical_website.json](test_results/physical_website.json) 和 [烧录启动检查](test_results/physical_flash.json)。`tests/` 的软件测试使用隔离的 `*_test` 数据库，包含清空测试表的操作；不会默认执行，也不应配置为真实监测数据库。
 
 完整传感器测量、真实 MQ 告警和实际邮箱投递仍需装板后验证。硬件的 **MECHANICAL VERIFICATION REQUIRED** 状态保留在全部制造说明中。
